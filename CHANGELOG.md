@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/cheminfo/xps-analysis/compare/v0.1.0...v0.1.1) (2021-04-21)
+
+
+### Bug Fixes
+
+* add peakPicking documentation ([15bfa12](https://www.github.com/cheminfo/xps-analysis/commit/15bfa1257e8d136fe91aefcf41f0ec6455ca21c7))
+* expose peakPicking ([7f6590a](https://www.github.com/cheminfo/xps-analysis/commit/7f6590a7717d739b285a2686ed090150c981ce6b))
+* migrate changelog ([e81a0c3](https://www.github.com/cheminfo/xps-analysis/commit/e81a0c319ea328b65db779449b8d30998af83269))
+
 ## [0.1.0](https://github.com/cheminfo/xps-analysis/compare/v0.0.3...v0.1.0) (2020-11-17)
 
 
@@ -27,4 +36,3 @@
 * meta should not contain arrays ([938e2ae](https://github.com/cheminfo/xps-analysis/commit/938e2aeafbd25288d298e481f0c5f2e2f77c0a1a))
 
 ### 0.0.1 (2020-09-23)
-
