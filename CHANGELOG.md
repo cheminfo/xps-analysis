@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.2.0...v0.3.0) (2021-07-06)
+
+
+### Features
+
+* Add region in metadata ([#8](https://www.github.com/cheminfo/xps-analysis/issues/8)) ([b3546c8](https://www.github.com/cheminfo/xps-analysis/commit/b3546c8e048f8fa4e00510bd9732ed1433b52b71))
+
 ## [0.2.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.1.0...v0.2.0) (2021-04-28)
 
 
