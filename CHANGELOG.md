@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.4.0...v0.5.0) (2021-07-20)
+
+
+### Features
+
+* convert to string if arrayBuffer ([cc445f7](https://www.github.com/cheminfo/xps-analysis/commit/cc445f72ec673a106d62fcbe56bdd07935029e36))
+
 ## [0.4.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.3.0...v0.4.0) (2021-07-20)
 
 
