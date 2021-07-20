@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.3.0...v0.4.0) (2021-07-20)
+
+
+### Features
+
+* update common-js ([afbbfe8](https://www.github.com/cheminfo/xps-analysis/commit/afbbfe8b1024f59f3bbca96a6a8672211658720d))
+
+
+### Bug Fixes
+
+* export JSGraph ([97e26f1](https://www.github.com/cheminfo/xps-analysis/commit/97e26f1b9a596c6e538dff61d8d924a19e9335f9))
+
 ## [0.3.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.2.0...v0.3.0) (2021-07-06)
 
 
