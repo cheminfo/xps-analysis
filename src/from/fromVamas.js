@@ -50,10 +50,10 @@ export function fromVamas(text) {
 
     const variables = {};
     if (xLabel === 'Kinetic energy' && sourceEnergy) {
-      // we will calculate bonding energy
+      // we will calculate binding energy
       variables.x = {
         data: xValues.map((value) => sourceEnergy - value).reverse(),
-        label: 'Bonding energy',
+        label: 'Binding energy',
         units: xUnits,
         type: 'DEPENDENT',
       };

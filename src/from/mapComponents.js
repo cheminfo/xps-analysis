@@ -4,11 +4,11 @@ export function mapComponents(parsedBlockComment, energyUnits = 'eV') {
     for (let component of parsedBlockComment.components) {
       components.push({
         energy: {
-          SI: component.position.value,
+          value: component.position.value,
           units: energyUnits,
         },
         name: component.name,
-        type: component.shape.name,
+        type: component.shape.kind,
         shapeParameters: {
           gamma: component.fwhm.value,
         },
