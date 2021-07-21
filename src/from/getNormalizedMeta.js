@@ -1,8 +1,12 @@
+import {parseCASA} from 'vamas';
+
+import { mapComponents } from './mapComponents.js';
 import { parseRegion } from './parseRegion.js';
 
 export function getNormalizedMeta(meta = {}) {
   const normalized = {};
   normalized.region = parseRegion(meta['block identifier']);
+  normalized.components = mapComponents(parseCASA(meta.blockComment));
   const energyType = {};
   energyType.kind = meta['abscissa label']
     .replace('energy', '')

@@ -14,4 +14,5 @@ test('appendCheminfoMeta', () => {
   expect(normalized.analysisSource.beamWidthX.value).toStrictEqual(1e37);
   expect(normalized.analysisSource.beamWidthY.value).toStrictEqual(1e37);
   expect(normalized.analysisSource.beamWidthX.units).toStrictEqual('um');
+  expect(normalized.components).toHaveLength(8);
 });
