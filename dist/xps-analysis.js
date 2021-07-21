@@ -1,6 +1,6 @@
 /**
  * xps-analysis - XPS analysis
- * @version v0.3.0
+ * @version v0.7.0
  * @link https://github.com/cheminfo/xps-analysis#readme
  * @license MIT
  */
@@ -12351,14 +12351,14 @@ ${indent}columns: ${matrix.columns}
         }
 
         if (observeFrequency && entry.ntuples && entry.ntuples.symbol && entry.ntuples.nucleus) {
-          let unit = '';
+          let units = '';
           let pageSymbolIndex = entry.ntuples.symbol.indexOf(spectrum.pageSymbol);
 
           if (entry.ntuples.units && entry.ntuples.units[pageSymbolIndex]) {
-            unit = entry.ntuples.units[pageSymbolIndex];
+            units = entry.ntuples.units[pageSymbolIndex];
           }
 
-          if (unit !== 'PPM') {
+          if (units !== 'PPM') {
             if (pageSymbolIndex !== 0) {
               throw Error('Not sure about this ntuples format');
             }
@@ -12858,6 +12858,7 @@ ${indent}columns: ${matrix.columns}
     });
 
     for (let entry of converted.flatten) {
+      if (!entry.spectra || !entry.spectra[0]) continue;
       let currentSpectrum = entry.spectra[0]; // we ensure variables
 
       if (!currentSpectrum.variables) {
@@ -12926,12 +12927,12 @@ ${indent}columns: ${matrix.columns}
       const key = keys[i];
       let variable = variables[key];
       let name = variable.label && variable.label.replace(/ *\[.*/, '');
-      let unit = variable.label && variable.label.replace(/.*\[(.*)\].*/, '$1');
+      let units = variable.label && variable.label.replace(/.*\[(.*)\].*/, '$1');
       symbol.push(variable.symbol || key);
       varName.push(variable.name || name || key);
       varDim.push(variables[key].data.length);
       varType.push(variable.type ? variable.type.toUpperCase() : i === 0 ? 'INDEPENDENT' : 'DEPENDENT');
-      units.push(variable.units || unit || '');
+      units.push(variable.units || units || '');
       first.push(variables[key][0]);
       last.push(variables[key][variables[key].length - 1]);
       min$1.push(min(variables[key].data));
@@ -13123,10 +13124,94 @@ ${points.join('\n')}
     return toJcamps(analysis, options).join('\n');
   }
 
-  const JSGraph = {
+  const JSGraph$1 = {
     getJSGraph,
     getNormalizationAnnotations
   };
+
+  /**
+   * @typedef {Object} Component
+   * @property {number} kineticEnergy
+   * @property {number} bindingEnergy
+   * @property {number} intensity
+   * @property {number} kind
+   * @property {number} assignment
+   */
+
+  /**
+   * Creates annotations for jsgraph that allows to display the result of component picking
+   * @param {array<Peak>} components
+   * @param {object} [options={}]
+   * @param {string} [options.fillColor='green']
+   * @param {string} [options.strokeColor='red']
+   * @param {string} [options.showAssignment=true] Display the assignment
+   * @param {function} [options.createFct] (annotation, component) => {}: callback allowing to add properties
+   * @param {string} [options.mode='binding'] 'binding' or 'kinetic'
+   * @returns array
+   */
+  function getAnnotations(components, options = {}) {
+    const {
+      fillColor = 'green',
+      strokeColor = 'red',
+      creationFct
+    } = options;
+    let annotations = components.map(component => {
+      let annotation = {
+        line: 1,
+        type: 'rect',
+        strokeColor: strokeColor,
+        strokeWidth: 0,
+        fillColor: fillColor
+      };
+
+      if (creationFct) {
+        creationFct(annotation, component);
+      }
+
+      return getAnnotation(annotation, component, options);
+    });
+    return annotations;
+  }
+
+  function getAnnotation(annotation, component, options = {}) {
+    const {
+      showAssignment = true,
+      mode = 'binding'
+    } = options;
+    let labels = [];
+    let line = 0;
+    let energy = mode === 'kinetic' ? component.kineticEnergy.value : component.bindingEnergy.value;
+    let intensity = component.intensity || '20px';
+
+    if (showAssignment) {
+      labels.push({
+        text: component.assignment,
+        size: '18px',
+        anchor: 'middle',
+        color: 'darkred',
+        position: {
+          x: energy,
+          y: intensity,
+          dy: `${23 + line * 14}px`
+        }
+      });
+      line++;
+    }
+
+    annotation.labels = labels;
+    annotation.position = [{
+      x: energy,
+      y: intensity,
+      dy: '10px',
+      dx: '-1px'
+    }, {
+      x: energy,
+      y: intensity,
+      dy: '5px',
+      dx: '1px'
+    }];
+    return annotation;
+  }
 
   /* eslint-disable no-unused-vars */
   function parse(text) {
@@ -13421,6 +13506,198 @@ ${points.join('\n')}
     return pointer;
   }
 
+  function appendCalibration(calibrations, line) {
+    let calibration = {}; // Calib M = 281.1700 A = 284.8 BE AD
+
+    let fields = line.match(/Calib (M = .*) (A = [^ ]*) (.*)/);
+
+    if (!fields) {
+      throw new Error(`appendCalibration fails on: ${line}`);
+    }
+
+    calibrations.push(calibration);
+  }
+
+  function appendComponent(components, line) {
+    // CASA comp (*Mo 3d MoS2 2H*) (*LA(1.53,243)*) Area 230.36971 1e-020 2327991 -1 1 MFWHM 0.88528218 0.2 2 -1 1 Position 1257.22 1257.02 1257.22 -1 1 RSF 10.804667 MASS 95.9219 INDEX -1 (*Mo 3d*) CONST (**) UNCORRECTEDRSF 9.5
+    let component = {};
+    const componentRegex = new RegExp([/CASA comp /, /\((?<name>.*)\) /, /\((?<shape>[^ ]*)\) /, /(?<area>Area .*)/, /(?<fwhm>MFWHM .*)/, /(?<position>Position .*) /, /(?<rsf>RSF .*) /, /(?<mass>MASS .*) /, /(?<index>INDEX .*) /, /(?<const>CONST .*) /, /(?<uncorrectedRSF>UNCORRECTEDRSF.*)/].map(r => r.source).join(''));
+    let fields = line.match(componentRegex);
+
+    if (!fields) {
+      throw new Error(`appendComponent fails on: ${line}`);
+    }
+
+    component = {
+      name: fields.groups.name,
+      shape: parseShape(fields.groups.shape),
+      area: parseArea(fields.groups.area),
+      fwhm: parseFWHM(fields.groups.fwhm),
+      position: parsePosition(fields.groups.position),
+      rsf: parseRSF(fields.groups.rsf),
+      mass: parseMass(fields.groups.mass),
+      index: parseIndex(fields.groups.index),
+      const: parseConst(fields.groups.const),
+      uncorrectedRSF: parseUncorrectedRSF(fields.groups.uncorrectedRSF)
+    };
+    components.push(component);
+  }
+
+  function parseShape(value) {
+    let parts = value.replace(/[*(),]/g, ' ').trim().split(/ +/);
+    let options = {};
+    let kind;
+
+    switch (parts[0]) {
+      case 'LA':
+        kind = `${parts[0]}`;
+        options.asymmetry = Number(parts[1]);
+        options.extension = Number(parts[2]);
+        break;
+
+      case 'GL':
+        kind = `${parts[0]}`;
+        options.unknown = Number(parts[1]);
+        break;
+
+      default:
+        throw Error(`appendComponent: unknown shape: ${parts[0]}`);
+    }
+
+    return {
+      kind,
+      options
+    };
+  }
+
+  function parseArea(value) {
+    let parts = value.split(' ');
+    return {
+      value: Number(parts[1]),
+      from: Number(parts[2]),
+      to: Number(parts[3]),
+      unknown1: Number(parts[4]),
+      unknown2: Number(parts[5])
+    };
+  }
+
+  function parseFWHM(value) {
+    let parts = value.split(' ');
+    return {
+      value: Number(parts[1]),
+      from: Number(parts[2]),
+      to: Number(parts[3]),
+      unknown1: Number(parts[4]),
+      unknown2: Number(parts[5])
+    };
+  }
+
+  function parsePosition(value) {
+    let parts = value.split(' ');
+    return {
+      value: Number(parts[1]),
+      from: Number(parts[2]),
+      to: Number(parts[3]),
+      unknown1: Number(parts[4]),
+      unknown2: Number(parts[5])
+    };
+  }
+
+  function parseRSF(value) {
+    let parts = value.split(' ');
+    return Number(parts[1]);
+  }
+
+  function parseMass(value) {
+    let parts = value.split(' ');
+    return Number(parts[1]);
+  }
+
+  function parseIndex(value) {
+    let parts = value.split(' ');
+    return Number(parts[1]);
+  }
+
+  function parseConst(value) {
+    return value;
+  } // We do not really know what this value means and hence just parse the string
+
+
+  function parseUncorrectedRSF(value) {
+    let parts = value.split(' ');
+    return Number(parts[1]);
+  }
+
+  function appendRegion(regions, line) {
+    // CASA region (*Mo 3d*) (*Shirley*) 1249.3343 1262.7065 10.804667 2 0 0 392.54541 -450 0 0 (*Mo 3d*) 95.9219 0 9.5
+    let fields = line.match(/CASA region \(\*(?<name>.*)\*\) \(\*(?<backgroundKind>.*)\*\) (?<backgroundOptions>.*) \((?<comment>.*)\) (?<surface>.*)/);
+
+    if (!fields) {
+      throw new Error(`appendRegion fails on: ${line}`);
+    }
+
+    let region = {
+      name: fields.groups.name,
+      background: {
+        name: fields.groups.backgroundKind,
+        options: fields.groups.backgroundOptions
+      }
+    };
+    regions.push(region);
+  }
+
+  function parseCASA(text) {
+    const casa = {
+      regions: [],
+      components: [],
+      calibrations: []
+    };
+    const lines = text.split(/\r?\n/);
+
+    for (const line of lines) {
+      if (line.startsWith('CASA comp ')) {
+        appendComponent(casa.components, line);
+      }
+
+      if (line.startsWith('CASA region')) {
+        appendRegion(casa.regions, line);
+      }
+
+      if (line.startsWith('Calib')) {
+        appendCalibration(casa.calibrations, line);
+      }
+    }
+
+    return casa;
+  }
+
+  function mapComponents(parsedBlockComment, sourceEnergy = undefined, energyUnits = 'eV') {
+    const components = [];
+
+    if (parsedBlockComment.components) {
+      for (let component of parsedBlockComment.components) {
+        components.push({
+          kineticEnergy: {
+            value: component.position.value,
+            units: energyUnits
+          },
+          bindingEnergy: {
+            value: sourceEnergy - component.position.value,
+            units: energyUnits
+          },
+          name: component.name.replace('*', ''),
+          type: component.shape.kind,
+          shapeParameters: {
+            gamma: component.fwhm.value
+          },
+          area: component.area.value
+        });
+      }
+    }
+
+    return components;
+  }
+
   const XPS_REGEX = /(?<element>[a-zA-Z]{0,3})\s(?<shell>[1-6])(?<angularMomentum>[a-z])/;
   const AUGER_REGEX = /(?<element>[a-zA-Z]{0,3})\s(?<transition>[a-zA-Z]{0,3})/;
   function parseRegion(string) {
@@ -13458,32 +13735,39 @@ ${points.join('\n')}
     normalized.region = parseRegion(meta['block identifier']);
     const energyType = {};
     energyType.kind = meta['abscissa label'].replace('energy', '').replace(/\s/g, '').toLowerCase();
-    energyType.unit = meta['abscissa units'];
+    energyType.units = meta['abscissa units'];
     normalized.energyType = energyType;
     const source = {};
     source.label = meta['analysis source label'];
     source.characteristicEnergy = {
       value: meta['analysis source characteristic energy'],
-      unit: 'eV'
+      units: 'eV'
     };
     source.beamWidthX = {
       value: meta['analysis source beam width x'],
-      unit: 'um'
+      units: 'um'
     };
     source.beamWidthY = {
       value: meta['analysis source beam width y'],
-      unit: 'um'
+      units: 'um'
     };
     normalized.analysisSource = source;
+    normalized.speciesLabel = meta['species label'];
+    normalized.components = mapComponents(parseCASA(meta.blockComment), source.characteristicEnergy.value);
+    const increment = meta['abscissa increment'];
+    normalized.from = meta['abscissa start'];
+    normalized.to = meta['abscissa start'] + increment * (meta.nbOrdinateValues - 1);
+    normalized.analyserMode = meta['analyser mode'];
     return normalized;
   }
 
   /**
    * Returns an Analysis from a VAMAS text file
-   * @param {string} [text] the vamas text file
+   * @param {arrayBuffer|string} [text] the vamas text file
    */
 
   function fromVamas(text) {
+    text = ensureString(text);
     let parsed = parse(text);
     let header = parsed.header;
     let blocks = parsed.blocks;
@@ -13526,10 +13810,10 @@ ${points.join('\n')}
       const variables = {};
 
       if (xLabel === 'Kinetic energy' && sourceEnergy) {
-        // we will calculate bonding energy
+        // we will calculate binding energy
         variables.x = {
           data: xValues.map(value => sourceEnergy - value).reverse(),
-          label: 'Bonding energy',
+          label: 'Binding energy',
           units: xUnits,
           type: 'DEPENDENT'
         };
@@ -23066,6 +23350,10 @@ ${points.join('\n')}
     orbital: '6p',
     be: 19
   }];
+
+  const JSGraph = { ...JSGraph$1,
+    getAnnotations
+  };
 
   exports.AnalysesManager = AnalysesManager;
   exports.Analysis = Analysis;
