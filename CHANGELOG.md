@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.5.0...v0.6.0) (2021-07-21)
+
+
+### Features
+
+* add component to meta ([#13](https://www.github.com/cheminfo/xps-analysis/issues/13)) ([4b47b52](https://www.github.com/cheminfo/xps-analysis/commit/4b47b529b44baf6e1720534ace05f22975061efe))
+* rename unit to units ([5000174](https://www.github.com/cheminfo/xps-analysis/commit/500017490ecaff09b8a6d8263c4118cff90329fb))
+
+
+### Bug Fixes
+
+* add normalized meta back ([9a838aa](https://www.github.com/cheminfo/xps-analysis/commit/9a838aa372f4d194db068084cf3cc96301d28ed3))
+
 ## [0.5.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.4.0...v0.5.0) (2021-07-20)
 
 
