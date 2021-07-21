@@ -1,4 +1,8 @@
-export function mapComponents(parsedBlockComment, sourceEnergy=undefined, energyUnits = 'eV') {
+export function mapComponents(
+  parsedBlockComment,
+  sourceEnergy = undefined,
+  energyUnits = 'eV',
+) {
   const components = [];
   if (parsedBlockComment.components) {
     for (let component of parsedBlockComment.components) {
@@ -11,7 +15,7 @@ export function mapComponents(parsedBlockComment, sourceEnergy=undefined, energy
           value: sourceEnergy - component.position.value,
           units: energyUnits,
         },
-        name: component.name.replace('*', ''),
+        assignment: component.name.match(/\*([^]+)\*/)[1],
         type: component.shape.kind,
         shapeParameters: {
           gamma: component.fwhm.value,
