@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.8.0...v0.9.0) (2021-07-21)
+
+
+### Bug Fixes
+
+* improve README ([b18d036](https://www.github.com/cheminfo/xps-analysis/commit/b18d036994810e72a04153d594da1b99dc6646c2))
+
 ## [0.8.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.7.0...v0.8.0) (2021-07-21)
 
 
