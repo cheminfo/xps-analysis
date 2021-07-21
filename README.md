@@ -6,6 +6,8 @@
 
 Parse, analyze, and convert XPS data.
 
+It supports Vamas format as well as CASA assignments.
+
 ## Installation
 
 `$ npm i xps-analysis`
