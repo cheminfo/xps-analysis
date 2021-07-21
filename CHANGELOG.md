@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.7.0...v0.8.0) (2021-07-21)
+
+
+### Features
+
+* rename `name` to `assignment` ([#16](https://www.github.com/cheminfo/xps-analysis/issues/16)) ([a68880d](https://www.github.com/cheminfo/xps-analysis/commit/a68880dfba38842adba197a9767d7131049ecc8d))
+
 ## [0.7.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.6.0...v0.7.0) (2021-07-21)
 
 
