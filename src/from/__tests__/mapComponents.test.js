@@ -16,10 +16,12 @@ CASA comp (*Mo 3d MoO3*) (*LA(1.53,243)*) Area 2669.5646 1e-020 2327991 -1 1 MFW
 CASA comp (*Mo 3d MoO3*) (*LA(1.53,243)*) Area 1779.7097 1e-020 2327991 8 0.66666667 MFWHM 1.4420932 0.25368427 6.3421067 8 1 Position 1251.4222 0 0 8 -3.14 RSF 10.804667 MASS 95.9219 INDEX -1 (*Mo 3d*) CONST (**) UNCORRECTEDRSF 9.5`);
 
   it('test the mapping', () => {
-    let mappedComponents = mapComponents(parsedBlockComment);
+    let mappedComponents = mapComponents(parsedBlockComment, 10);
     expect(mappedComponents).toHaveLength(10);
     expect(mappedComponents[0]).toHaveProperty('kineticEnergy');
     expect(mappedComponents[0]).toHaveProperty('bindingEnergy');
+    expect(mappedComponents[0].kineticEnergy.value).toBeGreaterThan(0);
+    expect(mappedComponents[0].bindingEnergy.value).toBeLessThan(0);
     expect(mappedComponents[0].type).toStrictEqual('LA');
     expect(mappedComponents[0]).toHaveProperty('type');
     expect(mappedComponents[0]).toHaveProperty('area');
