@@ -1,13 +1,17 @@
-export function mapComponents(parsedBlockComment, energyUnits = 'eV') {
+export function mapComponents(parsedBlockComment, sourceEnergy=undefined, energyUnits = 'eV') {
   const components = [];
   if (parsedBlockComment.components) {
     for (let component of parsedBlockComment.components) {
       components.push({
-        energy: {
+        kineticEnergy: {
           value: component.position.value,
           units: energyUnits,
         },
-        name: component.name,
+        bindingEnergy: {
+          value: sourceEnergy - component.position.value,
+          units: energyUnits,
+        },
+        name: component.name.replace('*', ''),
         type: component.shape.kind,
         shapeParameters: {
           gamma: component.fwhm.value,

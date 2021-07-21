@@ -1,4 +1,4 @@
-import {parseCASA} from 'vamas';
+import { parseCASA } from 'vamas';
 
 import { mapComponents } from './mapComponents.js';
 import { parseRegion } from './parseRegion.js';
@@ -6,7 +6,7 @@ import { parseRegion } from './parseRegion.js';
 export function getNormalizedMeta(meta = {}) {
   const normalized = {};
   normalized.region = parseRegion(meta['block identifier']);
-  normalized.components = mapComponents(parseCASA(meta.blockComment));
+
   const energyType = {};
   energyType.kind = meta['abscissa label']
     .replace('energy', '')
@@ -31,6 +31,10 @@ export function getNormalizedMeta(meta = {}) {
   };
   normalized.analysisSource = source;
   normalized.speciesLabel = meta['species label'];
+  normalized.components = mapComponents(
+    parseCASA(meta.blockComment),
+    source.characteristicEnergy.value,
+  );
 
   const increment = meta['abscissa increment'];
   normalized.from = meta['abscissa start'];

@@ -18,7 +18,9 @@ CASA comp (*Mo 3d MoO3*) (*LA(1.53,243)*) Area 1779.7097 1e-020 2327991 8 0.6666
   it('test the mapping', () => {
     let mappedComponents = mapComponents(parsedBlockComment);
     expect(mappedComponents).toHaveLength(10);
-    expect(mappedComponents[0]).toHaveProperty('energy');
+    expect(mappedComponents[0]).toHaveProperty('kineticEnergy');
+    expect(mappedComponents[0]).toHaveProperty('bindingEnergy');
+    expect(mappedComponents[0].type).toStrictEqual('LA');
     expect(mappedComponents[0]).toHaveProperty('type');
     expect(mappedComponents[0]).toHaveProperty('area');
   });

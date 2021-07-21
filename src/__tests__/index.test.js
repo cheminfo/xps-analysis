@@ -25,13 +25,13 @@ describe('fromVamas', () => {
     let jcamp = toJcamp(result);
     expect(jcamp.indexOf('CASA')).toBeGreaterThan(30000);
     expect(jcamp.length).toBeGreaterThan(579000);
-    expect(jcamp.length).toBeLessThan(615376);
+    expect(jcamp.length).toBeLessThan(622893);
 
     let cheminfo = jcamp
       .split(/\r?\n/)
       .filter((line) => line.includes('##$cheminfo='));
     expect(cheminfo).toHaveLength(54);
     expect(cheminfo[0]).toMatch('region');
-    expect(cheminfo[7]).toMatch('*S 2p WS2*');
-  });
+    expect(cheminfo[7]).toMatch('S 2p WS2');
+  })
 });
