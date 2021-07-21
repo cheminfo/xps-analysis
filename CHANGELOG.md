@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.6.0...v0.7.0) (2021-07-21)
+
+
+### Features
+
+* use `value` instead of `SI`, rename `bonding` to `binding` ([#14](https://www.github.com/cheminfo/xps-analysis/issues/14)) ([66c3547](https://www.github.com/cheminfo/xps-analysis/commit/66c354734f6d97b78fe0c1d1c43fed4178b94008))
+
 ## [0.6.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.5.0...v0.6.0) (2021-07-21)
 
 
