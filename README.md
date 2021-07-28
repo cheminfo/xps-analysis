@@ -3,6 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
+[![DOI](https://www.zenodo.org/badge/295670620.svg)](https://www.zenodo.org/badge/latestdoi/295670620)
 
 Parse, analyze, and convert XPS data.
 
