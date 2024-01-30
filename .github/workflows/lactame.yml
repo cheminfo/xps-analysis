@@ -13,7 +13,7 @@ jobs:
         run: echo "PACKAGENAME=$(jq .name package.json | tr -d '"')" >> $GITHUB_ENV
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: 14.x
+          node-version: 20.x
       - name: Install dependencies
         run: npm install
       - name: Build project
@@ -22,5 +22,5 @@ jobs:
         uses: zakodium/lactame-action@v1
         with:
           token: ${{ secrets.LACTAME_TOKEN }}
-          name: "${{env.PACKAGENAME}}"
+          name: '${{env.PACKAGENAME}}'
           folder: dist
