@@ -21,7 +21,7 @@ It supports Vamas format as well as CASA assignments.
 
 [npm-image]: https://img.shields.io/npm/v/xps-analysis.svg
 [npm-url]: https://www.npmjs.com/package/xps-analysis
-[ci-image]: https://github.com/cheminfo/xps-analysis/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-image]: https://github.com/cheminfo/xps-analysis/workflows/Node.js%20CI/badge.svg?branch=main
 [ci-url]: https://github.com/cheminfo/xps-analysis/actions?query=workflow%3A%22Node.js+CI%22
 [download-image]: https://img.shields.io/npm/dm/xps-analysis.svg
 [download-url]: https://www.npmjs.com/package/xps-analysis
