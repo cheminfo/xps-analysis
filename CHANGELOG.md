@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/cheminfo/xps-analysis/compare/v0.9.0...v0.10.0) (2024-01-30)
+
+
+### Features
+
+* update dependencies ([016077c](https://github.com/cheminfo/xps-analysis/commit/016077c1aa7a961fbbbacc950a432344cee8a2dd))
+
 ## [0.9.0](https://www.github.com/cheminfo/xps-analysis/compare/v0.8.0...v0.9.0) (2021-07-21)
 
 
