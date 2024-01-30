@@ -32,5 +32,5 @@ describe('fromVamas', () => {
     expect(cheminfo).toHaveLength(54);
     expect(cheminfo[0]).toMatch('region');
     expect(cheminfo[7]).toMatch('S 2p WS2');
-  })
+  });
 });

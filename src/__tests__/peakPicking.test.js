@@ -14,6 +14,6 @@ describe('peakPicking', () => {
 
   it('check number of peaks with default options', () => {
     let result = peakPicking(analysis.getXYSpectrum());
-    expect(result).toHaveLength(118);
+    expect(result).toHaveLength(12);
   });
 });

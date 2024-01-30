@@ -19,7 +19,6 @@ describe('fromVamas', () => {
     expect(typeof result.meta.cheminfo.meta).toBe('object');
   });
 
-
   it('auger', () => {
     let result = fromVamas(augerText).spectra[0];
     expect(Object.keys(result.variables)).toHaveLength(2);
