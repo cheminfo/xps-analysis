@@ -2,7 +2,6 @@ import { Analysis } from 'common-spectrum';
 import { ensureString } from 'ensure-string';
 import { parse } from 'vamas';
 
-
 import { getNormalizedMeta } from './getNormalizedMeta';
 
 /**
