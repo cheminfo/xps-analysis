@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/cheminfo/xps-analysis/compare/v0.11.0...v0.12.0) (2024-03-04)
+
+
+### Features
+
+* update common-spectrum to deal with toJSON and typedArrays ([ab99e61](https://github.com/cheminfo/xps-analysis/commit/ab99e6126b439c61612f952fa720de5f69b98d7f))
+
 ## [0.11.0](https://github.com/cheminfo/xps-analysis/compare/v0.10.0...v0.11.0) (2024-03-04)
 
 
