@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/cheminfo/xps-analysis/compare/v0.10.0...v0.11.0) (2024-03-04)
+
+
+### Features
+
+* update dependencies to allow from / to JSON ([cd1546f](https://github.com/cheminfo/xps-analysis/commit/cd1546f4389b0cf0433f483c9aef19fe405dfada))
+
 ## [0.10.0](https://github.com/cheminfo/xps-analysis/compare/v0.9.0...v0.10.0) (2024-01-30)
 
 
