@@ -35,20 +35,20 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.23.3",
-    "@types/jest": "^29.5.11",
+    "@types/jest": "^29.5.12",
     "cheminfo-build": "^1.2.0",
-    "eslint": "^8.56.0",
-    "eslint-config-cheminfo": "^9.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-cheminfo": "^9.2.0",
     "jest": "^29.7.0",
     "papaparse": "^5.4.1",
-    "prettier": "^3.2.4",
-    "rollup": "^4.9.6"
+    "prettier": "^3.2.5",
+    "rollup": "^4.12.0"
   },
   "dependencies": {
-    "common-spectrum": "2.4.0",
+    "common-spectrum": "2.5.0",
     "ensure-string": "^1.2.0",
     "ml-gsd": "^12.1.3",
-    "vamas": "^0.1.2"
+    "vamas": "^0.2.0"
   },
   "info": {
     "logo": "https://raw.githubusercontent.com/cheminfo/font/main/src/misc/cristal2.svg",
