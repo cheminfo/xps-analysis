@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.13.0](https://github.com/cheminfo/xps-analysis/compare/v0.12.0...v0.13.0) (2024-03-05)
+
+
+### Features
+
+* getAnalyses allows to filter by spectrumID ([83b02e4](https://github.com/cheminfo/xps-analysis/commit/83b02e4565940c8d1a3d6f6f702d96978f74e8a6))
+
+
+### Bug Fixes
+
+* simple prettier problem required a fix for a release ([3857c52](https://github.com/cheminfo/xps-analysis/commit/3857c528265dea8e7c26a116f530bf846bb05eb2))
+
 ## [0.12.0](https://github.com/cheminfo/xps-analysis/compare/v0.11.0...v0.12.0) (2024-03-04)
 
 
