@@ -15,7 +15,7 @@ export function mapComponents(
           value: sourceEnergy - component.position.value,
           units: energyUnits,
         },
-        assignment: component.name.match(/\*([^]+)\*/)[1],
+        assignment: component.componentID,
         type: component.shape.kind,
         shapeParameters: {
           gamma: component.fwhm.value,
