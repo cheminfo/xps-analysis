@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.0](https://github.com/cheminfo/xps-analysis/compare/v0.13.0...v0.14.0) (2024-04-24)
+
+
+### Features
+
+* update dependencies and vamas-parser to 0.3.0 ([55a0587](https://github.com/cheminfo/xps-analysis/commit/55a058774a256d4a890751db9e8885a9d7a6a5bd))
+
 ## [0.13.0](https://github.com/cheminfo/xps-analysis/compare/v0.12.0...v0.13.0) (2024-03-05)
 
 
