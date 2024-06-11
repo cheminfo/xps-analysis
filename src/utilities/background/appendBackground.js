@@ -1,5 +1,1 @@
-export function appendBackground() {
-
-
-
-}
+export function appendBackground() {}

@@ -1,0 +1,668 @@
+[
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(METHYL ISOPROPENYL KETONE)",
+    "Monomer": "daxHPJCqyqRZYjf`@",
+    "smiles": "[R2]C(C(=O)C)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "HYDROXYPROPYLCELLULOSE",
+    "Monomer": "fis@I@HXYju^cAxf\\\\bTRbbRTRJRRVxJjjjjjjjj@@",
+    "smiles": "[R2]OC1(OC(C([R1])C(C1OCCCO)OCCCO)C(O)CCCO)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYLENE ADIPATE)",
+    "Monomer": "dglBPHrUCqmqRVuVuijij`@",
+    "smiles": "[R2]OC(=O)CCCCC(=O)OCC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHER ETHER KETONE)",
+    "Monomer": "fakAa@N^ZCqzxiLkkJ{\\kmFFlVl@E@AL@E@@@@",
+    "smiles": "[R2]C3(=CC=C(OC2(=CC=C(C(=O)C1(=CC=C(O[R1])C=C1))C=C2))C=C3)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(METHYLENE GLYCOL)",
+    "Monomer": "gCaDHOGNJRu@@",
+    "smiles": "[R2]OC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(GLYCIDYL METHACRYLATE)",
+    "Monomer": "dcLLPJYP|^\\\\bdTQrb{UMUT@@",
+    "smiles": "[R2]C(C(=O)OCC1(OC1))(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(D,L-LACTIDE)",
+    "Monomer": "gNpdIaxuqRVzfh@",
+    "smiles": "[R2]OC(=O)C([R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(4-HYDROXYSTYRENE)",
+    "Monomer": "dmtHPECqYqRYe_FZ``H@@",
+    "smiles": "[R2]C(C1(=CC=C(O)C=C1))C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(HYDROXYETHYL METHACRYLATE)",
+    "Monomer": "dmTLPJYP|^\\\\bdTQrjfj`@",
+    "smiles": "[R2]C(C(=O)OCCO)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "ETHYLCELLULOSE",
+    "Monomer": "flyAQ@HXYjpODsbdllrjooAUUUUUUP@@",
+    "smiles": "[R2]OC1(OC(C([R1])C(C1OCC)OCC)COCC)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(METHYL ACRYLATE)",
+    "Monomer": "daxDPBhOEgEIf^ij@@",
+    "smiles": "[R2]C(C(=O)OC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL METHYL ETHER)",
+    "Monomer": "gGQDDOFnJSKUP@",
+    "smiles": "[R2]C(OC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ORTHOESTER) BASED ON TRANS-CYCLOHEXANEDIMETHANOL",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(CAPROLACTONE)",
+    "Monomer": "dedDPHpOFWEI[UZZj`@",
+    "smiles": "[R2]OC(=O)CCCCC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ACETYLACETOXYETHYL METHACRYLATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYL METHACRYLATE)",
+    "Monomer": "dedDPJXOGgGHiED]UMT@@",
+    "smiles": "[R2]C(C(=O)OCC)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "CELLULOSE",
+    "Monomer": "dklJPHqeLOGWEIYYm^Fjjjj@@",
+    "smiles": "[R2]OC1(OC(C([R1])C(C1O)O)CO)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL ISOBUTYL ETHER)",
+    "Monomer": "diDHPDCqiqRYWjjj@@",
+    "smiles": "[R2]C(OCC(C)C)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(LAURYL METHACRYLATE)",
+    "Monomer": "fby@a@JLAx|\\\\bdTQrRRRRUTuUUUT@@",
+    "smiles": "[R2]C(C(=O)OCCCCCCCCCCCC)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL ETHYL ETHER)",
+    "Monomer": "gNqDDOFnJSJuU@@",
+    "smiles": "[R2]C(OCC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ACRYLIC ACID)",
+    "Monomer": "gNpdCQxmqRYfih@",
+    "smiles": "[R2]C(C(=O)O)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL LAURATE)",
+    "Monomer": "fdq@a@DLAxt\\\\bbRaRRRRUUMUUU@@@",
+    "smiles": "[R2]C(OC(=O)CCCCCCCCCCC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYLENE-CO-MALEIC ANHYDRIDE)",
+    "Monomer": "dmtLPBhP|U\\\\bbbaVijfij@@",
+    "smiles": "[R2]C1(C(=O)OC(C1CC[R1])=O)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(METHYL METHACRYLATE)",
+    "Monomer": "diDDPJXOGgGHiEDZij@@",
+    "smiles": "[R2]C(C(=O)OC)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(DIALLYL PHTHALATE)",
+    "Monomer": "fn}@P`FB|D@RRAJxm|\\bbVRfbbTQrf]FjjXHFJj@@@",
+    "smiles": "[R3]C(C[R4])CCOC(=O)C1(=C(C(=O)OCC([R1])C[R2])C=CC=C1)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(TETRAMETHYLENE GLYCOL)",
+    "Monomer": "gNqDHOEnJRjuU@@",
+    "smiles": "[R2]OCCCC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL PROPIONATE)",
+    "Monomer": "diDDPDXOFgGHhdhZjZ@@",
+    "smiles": "[R2]C(OC(=O)CC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "CELLULOSE TRIACETATE",
+    "Monomer": "ffm@I@HXYjwdeAxf\\\\bTRbbRTTQagAUUUUTtsP@@",
+    "smiles": "[R2]OC1(OC(C([R1])C(C1OC(=O)C)OC(=O)C)C(O)C(=O)C)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(PROPYLENE GLYCOL)",
+    "Monomer": "gGQDHOFnJRkUP@",
+    "smiles": "[R2]OCCC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(STYRENE-CO-MALEIC ANHYDRIDE)",
+    "Monomer": "fhiAa@BTDCqlxyEEEBihdmQg`uMSPPD@@@",
+    "smiles": "[R2]C1(C(=O)OC(C1C(C2(=CC=CC=C2))C[R1])=O)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(BISPHENOL A CARBONATE)",
+    "Monomer": "fjmAa@HXHCqJxyDieDeeHhTmIR\\tt@ET@D@@@",
+    "smiles": "[R2]OC(=O)OC2(=CC=C(C(C1(=CC=C([R1])C=C1))(C)C)C=C2)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(METHACRYLIC ACID)",
+    "Monomer": "daxDPJXOGgEIifjZ@@",
+    "smiles": "[R2]C(C(=O)O)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(2,6-DIMETHYL-1,4-PHENYLENE OXIDE)",
+    "Monomer": "dmtHPHCqUqrIQQQWihBH`@@",
+    "smiles": "[R2]OC1(=C(C=C([R1])C=C1C)C)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL METHYL KETONE)",
+    "Monomer": "gNqDBOEnJSLuM@@",
+    "smiles": "[R2]C(C(=O)C)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL ALCOHOL)",
+    "Monomer": "gJQDDODnJS]T@@",
+    "smiles": "[R2]C(O)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL ACETATE)",
+    "Monomer": "daxDPDXOFgEIeZjf@@",
+    "smiles": "[R2]C(OC(=O)C)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYLENE TEREPHTHALATE)",
+    "Monomer": "f`a@Q@LTlxGcyqRU[e]mVji`@f`@@",
+    "smiles": "[R2]CCOC(=O)C1(=CC=C(C(=O)O[R1])C=C1)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(SEBACIC ANHYDRIDE)",
+    "Monomer": "do\\LPHqp|[\\TemUUZfjjjP@",
+    "smiles": "[R2]OC(=O)CCCCCCCCC([R1])=O"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYLENE GLYCOL)",
+    "Monomer": "gJQDHODnJRmT@@",
+    "smiles": "[R2]OCC[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ORTHOESTER) BASED ON HEXAMETHYLENEDIOL",
+    "Monomer": "fjm@q@NRT{tP^NWEIUUZ]oeT[pZjjjjjjh@@",
+    "smiles": "[R2]CCCCCCOC2(OC1(OC(O[R1])(CC)O1)(O2))(CC)"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(PIVALOLACTONE)",
+    "Monomer": "diDDPHpODWEI[iijh@@",
+    "smiles": "[R2]OC(=O)C(C[R1])(C)C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(3-HYDROXYBUTYRATE)",
+    "Monomer": "daxDPHpOEgEI[Zfj@@",
+    "smiles": "[R2]OC(=O)CC([R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(N-BUTYL METHACRYLATE)",
+    "Monomer": "dctDPJXOGgGHiED\\eUMUP@@",
+    "smiles": "[R2]C(C(=O)OCCCC)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ETHYL ACRYLATE)",
+    "Monomer": "diDDPBhOEgEIf_jZh@@",
+    "smiles": "[R2]C(C(=O)OCC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(VINYL ETHYL KETONE)",
+    "Monomer": "daxHPBCqYqRYgjZ`@",
+    "smiles": "[R2]C(C(=O)CC)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(4-METHOXYSTYRENE)",
+    "Monomer": "dcLHPECqYqRYe_QfhHB`@@",
+    "smiles": "[R2]C(C1(=CC=C(OC)C=C1))C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(ALKYL CARBONATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(TERT-BUTYL METHACRYLATE)",
+    "Monomer": "dctDPJXOGgGHiED]IUMUP@@",
+    "smiles": "[R2]C(C(=O)OC(C)(C)C)(C[R1])C"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(GLYCOLIDE)",
+    "Monomer": "gGPdIaxuqRVzZ@@",
+    "smiles": "[R2]OC(=O)C[R1]"
+  },
+  {
+    "Folder": "CHO POLYMERS",
+    "Filename": "POLY(DIALLYL ISOPHTHALATE)",
+    "Monomer": "ffm@P`J\\|D@RRAsxu\\\\bbVTtRTtJTqgUUL@PuU@@@",
+    "smiles": "[R3]C(C[R4])COC(=O)C1(=CC(C(=O)OCC([R2])C[R1])=CC=C1)"
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(2-CHLOROSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "CHLORINATED POLY(PROPYLENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYLIDINE CHLORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(4-CHLOROSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "CHLORINATED POLY(VINYL CHLORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(CHLOROPRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(3-CHLOROSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(2-CHLOROETHYL METHACRYLATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "CHLORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYL CHLORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(CIS-ISOPRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(1-BUTENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(1,2-BUTADIENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(ETHYLENE), HIGH DENSITY",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(STYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(TRANS-ISOPRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(2-VINYLNAPHTHALENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(4-METHYLSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(PROPYLENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(ISOBUTYLENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(A-METHYLSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(CIS-BUTADIENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "POLY(4-METHYL-1-PENTENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "HYDROCARBON POLYMERS",
+    "Filename": "P-QUATERPHENYL [POLY(PHENYLENE) OLIGOMER]",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "NYLON 12",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "N,N'-DIPHENYL-1,4-PHENYLENEDIAMINE [POLY(ANILINE) OLIGOMER]",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ETHER IMIDE) (KAPTON HN)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ETHER IMIDE) (ULTEM 1000)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "NYLON 6",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(METHACRYLONITRILE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(UREA)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(4-NITROSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ETHYLENEIMINE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "CELLULOSE TRINITRATE",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "NYLON 6,6",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(N-VINYLPYRROLIDONE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(9-VINYLCARBAZOLE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ACRYLONITRILE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ACRYLAMIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(ALLYLAMINE HYDROCHLORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(2-VINYLPYRIDINE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYLBENZYLTRIMETHYLAMMONIUM CHLORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(2-ETHYL-2-OXAZOLINE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(4-VINYLPYRIDINE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(METHACRYLAMIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "NITROGEN-CONTAINING POLYMERS",
+    "Filename": "POLY(URETHANE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYL FLUORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "VITON A",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(TETRAFLUOROETHYLENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "FOMBLIN Y",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYLIDINE FLUORIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(TRIFLUOROETHYL ACRYLATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "FLUORINE-CONTAINING POLYMERS",
+    "Filename": "POLY(VINYL TRIFLUOROACETATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "MISCELLANEOUS POLYMERS",
+    "Filename": "POLY(PHENOXYPHOSPHAZINE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "MISCELLANEOUS POLYMERS",
+    "Filename": "POLY(4-BROMOSTYRENE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "MISCELLANEOUS POLYMERS",
+    "Filename": "POLY(DIMETHYLSILOXANE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "MISCELLANEOUS POLYMERS",
+    "Filename": "POLY(PHENYLMETHYLSILOXANE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "SULPHUR-CONTAINING POLYMERS",
+    "Filename": "POLY(PHENYLENE SULPHIDE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "SULPHUR-CONTAINING POLYMERS",
+    "Filename": "POLY(ETHER SULPHONE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "SULPHUR-CONTAINING POLYMERS",
+    "Filename": "POLY(SODIUM 4-STYRENESULPHONATE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "SULPHUR-CONTAINING POLYMERS",
+    "Filename": "POLY(HEXAMETHYLENE SULPHONE)",
+    "Monomer": "",
+    "smiles": ""
+  },
+  {
+    "Folder": "SULPHUR-CONTAINING POLYMERS",
+    "Filename": "POLY(ETHYLENE SULPHIDE)",
+    "Monomer": "",
+    "smiles": ""
+  }
+]
