@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.0](https://github.com/cheminfo/xps-analysis/compare/v0.15.0...v0.16.0) (2024-06-11)
+
+
+### Features
+
+* implement predictUsingAI and predictUsingHose ([7dcc36b](https://github.com/cheminfo/xps-analysis/commit/7dcc36bc224ab4aa36c2661c655eb865ce8c21f2))
+
 ## [0.15.0](https://github.com/cheminfo/xps-analysis/compare/v0.14.0...v0.15.0) (2024-06-11)
 
 
