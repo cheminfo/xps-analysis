@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.15.0](https://github.com/cheminfo/xps-analysis/compare/v0.14.0...v0.15.0) (2024-06-11)
+
+
+### Features
+
+* add regions and components annotations ([52235f8](https://github.com/cheminfo/xps-analysis/commit/52235f819bf9d2824056731c6a728c89649d2e26))
+* deal with vamas regions ([cb3b39c](https://github.com/cheminfo/xps-analysis/commit/cb3b39c8b8a23e6c08fdbf38f727403efeeabd84))
+
 ## [0.14.0](https://github.com/cheminfo/xps-analysis/compare/v0.13.0...v0.14.0) (2024-04-24)
 
 
