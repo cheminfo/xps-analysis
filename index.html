@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>xps-analysis 0.15.0 | Documentation</title>
+  <title>xps-analysis 0.16.0 | Documentation</title>
   <meta name='description' content='XPS analysis'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>xps-analysis</h3>
-          <div class='mb1'><code>0.15.0</code></div>
+          <div class='mb1'><code>0.16.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -79,6 +79,16 @@
               
                 
                 <li><a
+                  href='#predictusingai'
+                  class="">
+                  predictUsingAI
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#predictusinghosecodes'
                   class="">
                   predictUsingHoseCodes
@@ -117,7 +127,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/jsgraph/getComponentsAnnotations.js#L1-L8'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/jsgraph/getComponentsAnnotations.js#L1-L8'>
       <span>src/jsgraph/getComponentsAnnotations.js</span>
       </a>
     
@@ -210,7 +220,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/from/fromVamas.js#L11-L92'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/from/fromVamas.js#L11-L92'>
       <span>src/from/fromVamas.js</span>
       </a>
     
@@ -278,7 +288,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/jsgraph/getComponentsAnnotations.js#L22-L38'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/jsgraph/getComponentsAnnotations.js#L22-L38'>
       <span>src/jsgraph/getComponentsAnnotations.js</span>
       </a>
     
@@ -429,7 +439,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/jsgraph/getRegionsAnnotations.js#L13-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/jsgraph/getRegionsAnnotations.js#L11-L25'>
       <span>src/jsgraph/getRegionsAnnotations.js</span>
       </a>
     
@@ -560,7 +570,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/peakPicking.js#L11-L20'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/peakPicking.js#L11-L20'>
       <span>src/peakPicking.js</span>
       </a>
     
@@ -667,12 +677,113 @@
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='predictusingai'>
+      predictUsingAI
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/utilities/prediction/predictUsingAI.js#L12-L69'>
+      <span>src/utilities/prediction/predictUsingAI.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>predictUsingAI(molecule: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.xShift</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='predictusinghosecodes'>
       predictUsingHoseCodes
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/utilities/prediction/predictUsingHoseCodes.js#L13-L83'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/utilities/prediction/predictUsingHoseCodes.js#L13-L83'>
       <span>src/utilities/prediction/predictUsingHoseCodes.js</span>
       </a>
     
@@ -773,7 +884,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/e61f6f5bd364df3f282debfd5cbbcc064176d719/src/references.js#L4-L2373'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/xps-analysis/blob/4ad22dd9dbd06a1eda7dcd5ebf802331f2e8d1f8/src/references.js#L4-L2373'>
       <span>src/references.js</span>
       </a>
     
