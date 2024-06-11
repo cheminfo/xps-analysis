@@ -36,7 +36,7 @@ export function getNormalizedMeta(meta = {}) {
     parsedCASAs,
     source.characteristicEnergy.value,
   );
-  normalized.regions = mapRegions(parsedCASAs);
+  normalized.regions = mapRegions(parsedCASAs, source.characteristicEnergy.value);
 
   const increment = meta['abscissa increment'];
   normalized.from = meta['abscissa start'];

@@ -9,17 +9,17 @@
 
 /**
  * Creates annotations for jsgraph that allows to display the result of component picking
- * @param {array<Peak>} components
+ * @param {Array<Component>} components
  * @param {object} [options={}]
  * @param {string} [options.fillColor='green']
  * @param {string} [options.strokeColor='red']
  * @param {string} [options.showAssignment=true] Display the assignment
- * @param {function} [options.createFct] (annotation, component) => {}: callback allowing to add properties
+ * @param {Function} [options.creationFct] (annotation, component) => {}: callback allowing to add properties
  * @param {string} [options.mode='binding'] 'binding' or 'kinetic'
  * @returns array
  */
 
-export function getAnnotations(components, options = {}) {
+export function getComponentsAnnotations(components, options = {}) {
   const { fillColor = 'green', strokeColor = 'red', creationFct } = options;
   let annotations = components.map((component) => {
     let annotation = {
