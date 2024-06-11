@@ -6,5 +6,11 @@ test('predictUsingHoseCodes', async () => {
   const molecule = OCL.Molecule.fromSmiles('CCO');
 
   const result = await predictUsingHoseCodes(molecule);
-  console.log(result);
+  expect(Object.keys(result)).toHaveLength(4);
+  expect(Object.keys(result)).toStrictEqual([
+    'values',
+    'spectrum',
+    'annotations',
+    'peaks',
+  ]);
 });

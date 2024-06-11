@@ -7,6 +7,7 @@ export function mapComponents(
   if (parsedBlockComment.components) {
     for (let component of parsedBlockComment.components) {
       components.push({
+        ...component,
         kineticEnergy: {
           value: component.position.value,
           units: energyUnits,
@@ -16,11 +17,6 @@ export function mapComponents(
           units: energyUnits,
         },
         assignment: component.componentID,
-        type: component.shape.kind,
-        shapeParameters: {
-          gamma: component.fwhm.value,
-        },
-        area: component.area.value,
       });
     }
   }

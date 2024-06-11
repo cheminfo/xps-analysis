@@ -1,5 +1,3 @@
-
-
 /**
  * Creates annotations for jsgraph that allows to display the result of component picking
  * @param {Array<any>} regions
@@ -12,7 +10,7 @@
 
 export function getRegionsAnnotations(regions, options = {}) {
   const { fillColor = 'rgba(0,255,255,0.1)', strokeColor = 'red' } = options;
-  regions = regions.filter(region => region?.background);
+  regions = regions.filter((region) => region?.background);
   const annotations = regions.map((region) => {
     let annotation = {
       line: 1,
@@ -31,12 +29,14 @@ function getAnnotation(annotation, region, options = {}) {
   let labels = [];
   let line = 0;
 
-  const energyStart = mode === 'kinetic'
-    ? region.background.parameters.kineticEnergyStart.value
-    : region.background.parameters.bindingEnergyStart.value;
-  const energyEnd = mode === 'kinetic'
-    ? region.background.parameters.kineticEnergyEnd.value
-    : region.background.parameters.bindingEnergyEnd.value;
+  const energyStart =
+    mode === 'kinetic'
+      ? region.background.parameters.kineticEnergyStart.value
+      : region.background.parameters.bindingEnergyStart.value;
+  const energyEnd =
+    mode === 'kinetic'
+      ? region.background.parameters.kineticEnergyEnd.value
+      : region.background.parameters.bindingEnergyEnd.value;
 
   if (showRegionID) {
     labels.push({

@@ -86,9 +86,9 @@ async function ensureSpheres() {
   if (data) return data;
   const url = `https://data.cheminfo.org/xps/qm9.json`;
   const response = await fetch(url);
+  //We do a global in place modification,
+  // eslint-disable-next-line require-atomic-updates
   data = await response.json();
-
-  console.log(Objecdata)
 }
 
 function getAnnotations(prediction, highlight, options) {

@@ -1,11 +1,11 @@
-import { parseDwar, TopicMolecule } from "openchemlib-utils";
+import { parseDwar, TopicMolecule } from 'openchemlib-utils';
 
 let dwar;
 
 export async function predictPolymer(molecule, options = {}) {
-
-  const polymers = OCLUtils.parseDwar(dwar).data.filter(entry => entry.Monomer);
-
+  const polymers = OCLUtils.parseDwar(dwar).data.filter(
+    (entry) => entry.Monomer,
+  );
 
   for (const entry of polymers) {
     const alpha = Molecule.fromSmiles('C[2H]');
@@ -31,18 +31,18 @@ export async function predictPolymer(molecule, options = {}) {
     const hoses = topicMolecule.hoseCodes;
     const results = [];
     for (let sphere = 0; sphere < hoses[0].length; sphere++) {
-      results.push({ sphere, hoses: {} })
+      results.push({ sphere, hoses: {} });
     }
     for (let index = 0; index < hoses.length; index++) {
       if (polymer.getAtomMapNo(index) !== 3) continue;
-      const entry = hoses[index]
+      const entry = hoses[index];
       for (let sphere = 0; sphere < hoses[0].length; sphere++) {
         const hose = entry[sphere];
         if (!results[sphere].hoses[hose]) {
           results[sphere].hoses[hose] = {
             hose,
             counter: 0,
-          }
+          };
         }
         results[sphere].hoses[hose].counter++;
       }
@@ -52,7 +52,6 @@ export async function predictPolymer(molecule, options = {}) {
     }
     return results;
   }
-
 
   function getAlphaGamma(Molecule) {
     const r1AtomicNo = Molecule.getAtomicNoFromLabel(
@@ -69,13 +68,11 @@ export async function predictPolymer(molecule, options = {}) {
     gamma.setAtomicNo(0, r2AtomicNo);
     return { alpha, gamma };
   }
-
 }
-
 
 async function ensureDB() {
   if (dwar) return;
   const response = await fetch('https://data.cheminfo.org/xps/polymerDB.dwar');
   const content = await response.arrayBuffer();
-  dwar = parseDwar(content).data
+  dwar = parseDwar(content).data;
 }

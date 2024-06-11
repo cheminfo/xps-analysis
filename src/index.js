@@ -17,6 +17,11 @@ export { peakPicking } from './peakPicking';
 
 export { references } from './references';
 
-export const JSGraph = { ...OriginalJSGraph, getRegionsAnnotations, getComponentsAnnotations };
+export const JSGraph = {
+  ...OriginalJSGraph,
+  getRegionsAnnotations,
+  getComponentsAnnotations,
+};
 
 export { predictUsingHoseCodes } from './utilities/prediction/predictUsingHoseCodes';
+export { predictUsingAI } from './utilities/prediction/predictUsingAI';

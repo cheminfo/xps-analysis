@@ -6,5 +6,6 @@ test('predictUsingAI', async () => {
   const molecule = OCL.Molecule.fromSmiles('CCO');
 
   const result = await predictUsingAI(molecule);
-  console.log(result);
+  expect(result);
+  expect(result.peaks).toHaveLength(3);
 });

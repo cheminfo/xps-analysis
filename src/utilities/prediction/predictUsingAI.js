@@ -19,7 +19,7 @@ export async function predictUsingAI(molecule, options = {}) {
 
   if (!cache[molfile]) {
     const response = await fetch(
-      'https://xps.cheminfo.org/v1/predict_binding_energies',
+      'https://xps-service.cheminfo.org/v1/predict_binding_energies',
       {
         method: 'post',
         headers: {

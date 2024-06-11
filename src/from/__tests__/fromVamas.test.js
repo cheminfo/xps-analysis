@@ -34,8 +34,11 @@ describe('fromVamas', () => {
     expect(typeof result.meta.cheminfo.meta).toBe('object');
   });
 
-  it.only('Cellulose with CASA information, regions and components', () => {
-    const text = readFileSync(join(__dirname, './data/cellulose_fitted_following_briggs.vms'), 'utf8');
+  it('Cellulose with CASA information, regions and components', () => {
+    const text = readFileSync(
+      join(__dirname, './data/cellulose_fitted_following_briggs.vms'),
+      'utf8',
+    );
     const parsed = fromVamas(text);
     const c1s = parsed.spectra[1];
     expect(Object.keys(c1s.variables)).toHaveLength(2);
