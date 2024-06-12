@@ -17,7 +17,6 @@ test('predictUsingHoseCodes', async () => {
   ]);
 
   expect(resultNoRef.peaks[0]).toStrictEqual({
-    transition: 'C1s',
     x: 290.6834,
     y: 1,
   });
@@ -26,4 +25,8 @@ test('predictUsingHoseCodes', async () => {
     energyReference: 'solid',
   });
   expect(resultSolidRef.peaks[0].x).toBeCloseTo(285.30823, 4);
+
+
+  expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(resultNoRef.grouped[0].prediction.boxplot.median);
+
 });

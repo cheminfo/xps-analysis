@@ -59,26 +59,32 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
       }
       const prediction = sphere.hoses[hose];
       if (prediction) {
-        hoseCode.prediction = prediction;
+        hoseCode.prediction = structuredClone(prediction);
         break;
       }
     }
   }
+
+  // before anything else we should shift if required
+  for (const hoseCode of values) {
+    const transition = `${hoseCode.atomLabel}1s`;
+    const xShiftFct = xShiftFcts[energyReference]?.[transition];
+    if (xShiftFct) {
+      for (const key of Object.keys(hoseCode.prediction.boxplot)) {
+        hoseCode.prediction.boxplot[key] = xShiftFct(hoseCode.prediction.boxplot[key]);
+      }
+    }
+  }
+
+
 
   const peaks = values
     .filter((value) => value.prediction)
     .map((value) => ({
       x: value.prediction.boxplot.median,
       y: 1,
-      transition: `${value.atomLabel}1s`,
     }));
 
-  for (const peak of peaks) {
-    const xShiftFct = xShiftFcts[energyReference]?.[peak.transition];
-    if (xShiftFct) {
-      peak.x = xShiftFct(peak.x);
-    }
-  }
 
   // todo shift values if required
   const spectrum = generateSpectrum(peaks, spectrumOptions);
