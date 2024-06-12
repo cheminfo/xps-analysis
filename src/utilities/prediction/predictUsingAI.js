@@ -1,7 +1,7 @@
+import md5 from 'md5';
 import { generateSpectrum } from 'spectrum-generator';
 
 const cache = {};
-
 
 /**
  *
@@ -11,16 +11,15 @@ const cache = {};
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
  */
 export async function predictUsingAI(molecule, options = {}) {
-  const {
-    spectrum: spectrumOptions,
-  } = options;
+  const { spectrum: spectrumOptions, energyReference = 'solid' } = options;
 
   const moleculeWithH = molecule.getCompactCopy();
   moleculeWithH.addImplicitHydrogens();
 
   const molfile = moleculeWithH.toMolfile();
+  const cacheKey = md5(molfile + energyReference);
 
-  if (!cache[molfile]) {
+  if (!cache[cacheKey]) {
     const response = await fetch(
       'https://xps-service.cheminfo.org/v1/predict_binding_energies',
       {
@@ -32,13 +31,14 @@ export async function predictUsingAI(molecule, options = {}) {
           molFile: molfile,
           method: 'GFN2xTB',
           fmax: 0.01,
+          energyReference,
         }),
       },
     );
-    cache[molfile] = await response.json();
+    cache[cacheKey] = await response.json();
   }
 
-  const predictions = cache[molfile].predictions;
+  const predictions = cache[cacheKey].predictions;
 
   const peaks = [];
   const xyz = [predictions.length, 'XTB optimized geometry'];

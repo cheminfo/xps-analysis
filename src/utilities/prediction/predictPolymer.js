@@ -1,21 +1,22 @@
-import { createPolymer, } from 'openchemlib-utils';
+import { createPolymer } from 'openchemlib-utils';
 
 import { predictUsingHoseCodes } from './predictUsingHoseCodes.js';
 
-
 export async function predictPolymer(monomer, options = {}) {
-  const { Molecule } = monomer.getOCL()
+  const { Molecule } = monomer.getOCL();
   const polymer = createPolymer(monomer, {
     count: 5, // we create 5 monomers and we use the middle one
     markMonomer: true,
     ...getAlphaGamma(Molecule),
   });
 
-  const prediction = await predictUsingHoseCodes(polymer, { atomMapNo: 3, ...options });
+  const prediction = await predictUsingHoseCodes(polymer, {
+    atomMapNo: 3,
+    ...options,
+  });
 
-  return prediction
+  return prediction;
 }
-
 
 function getAlphaGamma(Molecule) {
   const r1AtomicNo = Molecule.getAtomicNoFromLabel(
@@ -32,5 +33,3 @@ function getAlphaGamma(Molecule) {
   gamma.setAtomicNo(0, r2AtomicNo);
   return { alpha, gamma };
 }
-
-

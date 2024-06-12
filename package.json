@@ -49,6 +49,7 @@
   "dependencies": {
     "common-spectrum": "2.7.0",
     "ensure-string": "^1.2.0",
+    "md5": "^2.3.0",
     "ml-gsd": "^12.1.6",
     "openchemlib-utils": "^5.21.1",
     "vamas": "^0.3.0"

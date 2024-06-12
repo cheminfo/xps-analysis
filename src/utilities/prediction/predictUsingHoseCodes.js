@@ -5,10 +5,10 @@ let data;
 
 const xShiftFcts = {
   solid: {
-    c1s: (x) => x,
-    o1s: (x) => x,
-  }
-}
+    C1s: (x) => -2501.002792622873 + 18.12807741 * x - 0.02938832 * x ** 2,
+    O1s: (x) => -14914.578039681715 + 5.67166123e1 * x - 5.20506217e-2 * x ** 2,
+  },
+};
 
 /**
  *
@@ -16,7 +16,7 @@ const xShiftFcts = {
  * @param {object} options
  * @param {string} [options.statsKey='gw']
  * @param {number|undefined} [options.atomMapNo] // allows to filter for specific atoms
- * @param {string} [options.energyReference='solid']
+ * @param {'solid'|'none'} [options.energyReference='solid']
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
  */
 export async function predictUsingHoseCodes(molecule, options = {}) {
@@ -27,8 +27,6 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
     atomMapNo,
   } = options;
   await ensureSpheres();
-
-  const xShiftFct = undefined;
 
   const spheres = data.spheres[statsKey];
   const diaIDs = getDiastereotopicAtomIDsAndH(molecule);
@@ -45,9 +43,12 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
       atomMapNo: molecule.getAtomMapNo(index),
       _highlight: [diaIDs[index].oclID],
     }))
-    .filter((value) => value.atomLabel && value.atomLabel !== 'H' && value.atomLabel !== '?')
+    .filter(
+      (value) =>
+        value.atomLabel && value.atomLabel !== 'H' && value.atomLabel !== '?',
+    )
     .filter((value) => value.hoses)
-    .filter((value) => (!atomMapNo) || (value.atomMapNo === atomMapNo));
+    .filter((value) => !atomMapNo || value.atomMapNo === atomMapNo);
 
   for (const hoseCode of values) {
     for (let i = hoseCode.hoses.length - 1; i >= 0; i--) {
@@ -66,10 +67,15 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
 
   const peaks = values
     .filter((value) => value.prediction)
-    .map((value) => ({ x: value.prediction.boxplot.median, y: 1 }));
+    .map((value) => ({
+      x: value.prediction.boxplot.median,
+      y: 1,
+      transition: `${value.atomLabel}1s`,
+    }));
 
-  if (xShiftFct) {
-    for (const peak of peaks) {
+  for (const peak of peaks) {
+    const xShiftFct = xShiftFcts[energyReference]?.[peak.transition];
+    if (xShiftFct) {
       peak.x = xShiftFct(peak.x);
     }
   }
@@ -81,7 +87,6 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
   // during this operation we should take care to combine _highlights
   const uniqueValuesObject = {};
   for (const value of values) {
-    console.log(value)
     const key = `${value.prediction.idCode}`;
     if (uniqueValuesObject[key]) {
       uniqueValuesObject[key].atomNumbers.push(value.atomNumber);
@@ -90,7 +95,11 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
         uniqueValuesObject[key]._highlight.push(highlight);
       }
     } else {
-      const { atomNumber, ...uniqueValueObject } = { ...value, atomNumbers: [value.atomNumber] }
+      // eslint-disable-next-line no-unused-vars
+      const { atomNumber, ...uniqueValueObject } = {
+        ...value,
+        atomNumbers: [value.atomNumber],
+      };
       uniqueValuesObject[key] = uniqueValueObject;
     }
   }
