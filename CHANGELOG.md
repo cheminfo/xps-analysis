@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.1](https://github.com/cheminfo/xps-analysis/compare/v0.18.0...v0.18.1) (2024-06-12)
+
+
+### Bug Fixes
+
+* shift correctly predictUsingHoseCodes ([80f699b](https://github.com/cheminfo/xps-analysis/commit/80f699beb641182b970be3e90afca36f55e4f688))
+
 ## [0.18.0](https://github.com/cheminfo/xps-analysis/compare/v0.17.0...v0.18.0) (2024-06-12)
 
 
