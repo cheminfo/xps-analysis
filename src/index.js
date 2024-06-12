@@ -25,3 +25,4 @@ export const JSGraph = {
 
 export { predictUsingHoseCodes } from './utilities/prediction/predictUsingHoseCodes';
 export { predictUsingAI } from './utilities/prediction/predictUsingAI';
+export { predictPolymer } from './utilities/prediction/predictPolymer';

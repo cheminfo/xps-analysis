@@ -2,6 +2,7 @@ import { generateSpectrum } from 'spectrum-generator';
 
 const cache = {};
 
+
 /**
  *
  * @param {import('openchemlib').Molecule} [molecule]
@@ -10,7 +11,9 @@ const cache = {};
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
  */
 export async function predictUsingAI(molecule, options = {}) {
-  const { spectrum: spectrumOptions } = options;
+  const {
+    spectrum: spectrumOptions,
+  } = options;
 
   const moleculeWithH = molecule.getCompactCopy();
   moleculeWithH.addImplicitHydrogens();

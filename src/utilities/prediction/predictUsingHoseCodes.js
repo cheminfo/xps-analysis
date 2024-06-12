@@ -3,33 +3,53 @@ import { generateSpectrum } from 'spectrum-generator';
 
 let data;
 
+const xShiftFcts = {
+  solid: {
+    c1s: (x) => x,
+    o1s: (x) => x,
+  }
+}
+
 /**
  *
  * @param {import('openchemlib').Molecule} [molecule]
  * @param {object} options
  * @param {string} [options.statsKey='gw']
+ * @param {number|undefined} [options.atomMapNo] // allows to filter for specific atoms
+ * @param {string} [options.energyReference='solid']
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
  */
 export async function predictUsingHoseCodes(molecule, options = {}) {
-  const { statsKey = 'gw', spectrum: spectrumOptions } = options;
+  const {
+    statsKey = 'gw',
+    spectrum: spectrumOptions,
+    energyReference = 'solid',
+    atomMapNo,
+  } = options;
   await ensureSpheres();
+
+  const xShiftFct = undefined;
 
   const spheres = data.spheres[statsKey];
   const diaIDs = getDiastereotopicAtomIDsAndH(molecule);
   const annotations = [];
   const annotationOptions = { verticalPosition: 0 };
+
   let values = getHoseCodes(molecule, {
     maxSphereSize: 2,
-    atomLabels: ['O', 'C'],
   })
     .map((hoses, index) => ({
       hoses,
       atomLabel: molecule.getAtomLabel(index),
+      atomNumber: index,
+      atomMapNo: molecule.getAtomMapNo(index),
       _highlight: [diaIDs[index].oclID],
     }))
-    .filter((value) => value.hoses);
+    .filter((value) => value.atomLabel && value.atomLabel !== 'H' && value.atomLabel !== '?')
+    .filter((value) => value.hoses)
+    .filter((value) => (!atomMapNo) || (value.atomMapNo === atomMapNo));
+
   for (const hoseCode of values) {
-    if (!hoseCode.hoses) continue;
     for (let i = hoseCode.hoses.length - 1; i >= 0; i--) {
       const hose = hoseCode.hoses[i];
       const sphere = spheres[i];
@@ -47,29 +67,38 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
   const peaks = values
     .filter((value) => value.prediction)
     .map((value) => ({ x: value.prediction.boxplot.median, y: 1 }));
+
+  if (xShiftFct) {
+    for (const peak of peaks) {
+      peak.x = xShiftFct(peak.x);
+    }
+  }
+
+  // todo shift values if required
   const spectrum = generateSpectrum(peaks, spectrumOptions);
 
   // values should be unique based on value.prediction.idCode
   // during this operation we should take care to combine _highlights
   const uniqueValuesObject = {};
   for (const value of values) {
+    console.log(value)
     const key = `${value.prediction.idCode}`;
     if (uniqueValuesObject[key]) {
+      uniqueValuesObject[key].atomNumbers.push(value.atomNumber);
       const highlight = value._highlight[0];
       if (!uniqueValuesObject[key]._highlight.includes(highlight)) {
         uniqueValuesObject[key]._highlight.push(highlight);
       }
     } else {
-      uniqueValuesObject[key] = value;
+      const { atomNumber, ...uniqueValueObject } = { ...value, atomNumbers: [value.atomNumber] }
+      uniqueValuesObject[key] = uniqueValueObject;
     }
   }
-  values = Object.values(uniqueValuesObject);
-
-  values = values.sort(
+  const grouped = Object.values(uniqueValuesObject).sort(
     (a, b) => a.prediction.boxplot.median - b.prediction.boxplot.median,
   );
 
-  for (const hoseCode of values) {
+  for (const hoseCode of grouped) {
     annotations.push(
       ...getAnnotations(
         hoseCode.prediction,
@@ -79,7 +108,7 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
     );
   }
 
-  return { values, spectrum, annotations, peaks };
+  return { grouped, spectrum, annotations, peaks };
 }
 
 async function ensureSpheres() {

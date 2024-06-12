@@ -1,4 +1,244 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fromVamas > Cellulose with CASA information, regions and components 1`] = `
+{
+  "analyserMode": "FAT",
+  "analysisSource": {
+    "beamWidthX": {
+      "units": "um",
+      "value": 6000,
+    },
+    "beamWidthY": {
+      "units": "um",
+      "value": 500,
+    },
+    "characteristicEnergy": {
+      "units": "eV",
+      "value": 1486.6,
+    },
+    "label": "Al Ka, Monochromated",
+  },
+  "components": [
+    {
+      "area": {
+        "lowerBound": 1e-20,
+        "upperBound": 126904.8,
+        "value": 4830.0138,
+      },
+      "assignment": "C 1s 1",
+      "atomicMass": 12.011,
+      "bindingEnergy": {
+        "units": "eV",
+        "value": 286.7736,
+      },
+      "componentID": "C 1s 1",
+      "fwhm": {
+        "lowerBound": 0.25,
+        "upperBound": 6.25,
+        "value": 1.1057933,
+      },
+      "groupIndex": -1,
+      "kineticEnergy": {
+        "units": "eV",
+        "value": 1199.8264,
+      },
+      "position": {
+        "lowerBound": 1199.7,
+        "upperBound": 1199.87,
+        "value": 1199.8264,
+      },
+      "relativeSensitivityFactor": 0.278,
+      "shape": {
+        "kind": "lorentzianAsymmetric",
+        "options": {
+          "alpha": 1.4,
+          "beta": 1.7,
+          "m": 100,
+        },
+      },
+      "uncorrectedRSF": 0.278,
+    },
+    {
+      "area": {
+        "constrain": {
+          "factor": 0.2048,
+          "linkedComponent": 0,
+        },
+        "lowerBound": 0,
+        "upperBound": 2000,
+        "value": 989.18682,
+      },
+      "assignment": "C 1s 2",
+      "atomicMass": 12.011,
+      "bindingEnergy": {
+        "units": "eV",
+        "value": 288.1950999999999,
+      },
+      "componentID": "C 1s 2",
+      "fwhm": {
+        "lowerBound": 0.25,
+        "upperBound": 6.25,
+        "value": 1.1121055,
+      },
+      "groupIndex": -1,
+      "kineticEnergy": {
+        "units": "eV",
+        "value": 1198.4049,
+      },
+      "position": {
+        "lowerBound": 1198.34,
+        "upperBound": 1198.74,
+        "value": 1198.4049,
+      },
+      "relativeSensitivityFactor": 0.278,
+      "shape": {
+        "kind": "lorentzianAsymmetric",
+        "options": {
+          "alpha": 1.4,
+          "beta": 1.6,
+          "m": 100,
+        },
+      },
+      "uncorrectedRSF": 0.278,
+    },
+    {
+      "area": {
+        "lowerBound": 0,
+        "upperBound": 243,
+        "value": 56.812945,
+      },
+      "assignment": "C 1s degrad",
+      "atomicMass": 12.011,
+      "bindingEnergy": {
+        "units": "eV",
+        "value": 288.8453999999999,
+      },
+      "componentID": "C 1s degrad",
+      "fwhm": {
+        "lowerBound": 0.25,
+        "upperBound": 2,
+        "value": 0.82920074,
+      },
+      "groupIndex": -1,
+      "kineticEnergy": {
+        "units": "eV",
+        "value": 1197.7546,
+      },
+      "position": {
+        "lowerBound": 1197.3546,
+        "upperBound": 1197.7546,
+        "value": 1197.7546,
+      },
+      "relativeSensitivityFactor": 0.278,
+      "shape": {
+        "kind": "gaussianLorentzianProduct",
+        "options": {
+          "mixingRatio": 30,
+        },
+      },
+      "uncorrectedRSF": 0.278,
+    },
+    {
+      "area": {
+        "lowerBound": 1e-20,
+        "upperBound": 126904.8,
+        "value": 100.40835,
+      },
+      "assignment": "C 1s Adv.C",
+      "atomicMass": 12.011,
+      "bindingEnergy": {
+        "units": "eV",
+        "value": 284.8711999999998,
+      },
+      "componentID": "C 1s Adv.C",
+      "fwhm": {
+        "lowerBound": 0.25,
+        "upperBound": 6.25,
+        "value": 0.74742285,
+      },
+      "groupIndex": -1,
+      "kineticEnergy": {
+        "units": "eV",
+        "value": 1201.7288,
+      },
+      "position": {
+        "lowerBound": 1201.4,
+        "upperBound": 1201.8,
+        "value": 1201.7288,
+      },
+      "relativeSensitivityFactor": 0.278,
+      "shape": {
+        "kind": "gaussianLorentzianProduct",
+        "options": {
+          "mixingRatio": 30,
+        },
+      },
+      "uncorrectedRSF": 0.278,
+    },
+  ],
+  "energyType": {
+    "kind": "binding",
+    "units": "eV",
+  },
+  "from": 294.16,
+  "region": {
+    "auger": {
+      "element": null,
+      "transition": null,
+    },
+    "name": "C 1s",
+    "orbital": {
+      "angularMomentum": "s",
+      "element": "C",
+      "shell": 1,
+    },
+  },
+  "regions": [
+    {
+      "background": {
+        "parameters": {
+          "averageWidth": 1,
+          "bindingEnergyEnd": {
+            "units": "eV",
+            "value": 283.34839999999986,
+          },
+          "bindingEnergyStart": {
+            "units": "eV",
+            "value": 293.2871,
+          },
+          "crossSection": [
+            40.442441,
+            -450,
+            0,
+            0,
+          ],
+          "endOffset": 0,
+          "kineticEnergyEnd": {
+            "units": "eV",
+            "value": 1203.2516,
+          },
+          "kineticEnergyStart": {
+            "units": "eV",
+            "value": 1193.3129,
+          },
+          "relativeSensitivityFactor": 0.278,
+          "startOffset": 0,
+        },
+        "rawParameters": "1193.3129 1203.2516 0.278 2 0 0 40.442441 -450 0 0",
+        "type": "Shirley",
+      },
+      "block": {
+        "atomicMass": 12.011,
+        "regionBlockID": "C 1s",
+        "relativeSensitivityFactor": 0.278,
+      },
+      "regionID": "C 1s",
+    },
+  ],
+  "speciesLabel": "C",
+  "to": 282.16,
+}
+`;
 
 exports[`fromVamas Cellulose with CASA information, regions and components 1`] = `
 {

@@ -8,7 +8,7 @@ test('predictUsingHoseCodes', async () => {
   const result = await predictUsingHoseCodes(molecule);
   expect(Object.keys(result)).toHaveLength(4);
   expect(Object.keys(result)).toStrictEqual([
-    'values',
+    'grouped',
     'spectrum',
     'annotations',
     'peaks',
