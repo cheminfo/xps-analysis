@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.0](https://github.com/cheminfo/xps-analysis/compare/v0.17.0...v0.18.0) (2024-06-12)
+
+
+### Features
+
+* add reference shift for predictors ([de116e7](https://github.com/cheminfo/xps-analysis/commit/de116e7f96ab07f7933d7d787a95676efa162310))
+
 ## [0.17.0](https://github.com/cheminfo/xps-analysis/compare/v0.16.0...v0.17.0) (2024-06-12)
 
 
