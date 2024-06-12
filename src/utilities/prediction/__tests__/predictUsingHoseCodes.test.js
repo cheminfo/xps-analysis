@@ -26,7 +26,7 @@ test('predictUsingHoseCodes', async () => {
   });
   expect(resultSolidRef.peaks[0].x).toBeCloseTo(285.30823, 4);
 
-
-  expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(resultNoRef.grouped[0].prediction.boxplot.median);
-
+  expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(
+    resultNoRef.grouped[0].prediction.boxplot.median,
+  );
 });

@@ -71,12 +71,12 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
     const xShiftFct = xShiftFcts[energyReference]?.[transition];
     if (xShiftFct) {
       for (const key of Object.keys(hoseCode.prediction.boxplot)) {
-        hoseCode.prediction.boxplot[key] = xShiftFct(hoseCode.prediction.boxplot[key]);
+        hoseCode.prediction.boxplot[key] = xShiftFct(
+          hoseCode.prediction.boxplot[key],
+        );
       }
     }
   }
-
-
 
   const peaks = values
     .filter((value) => value.prediction)
@@ -84,7 +84,6 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
       x: value.prediction.boxplot.median,
       y: 1,
     }));
-
 
   // todo shift values if required
   const spectrum = generateSpectrum(peaks, spectrumOptions);
