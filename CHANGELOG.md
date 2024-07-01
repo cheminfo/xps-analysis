@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.0](https://github.com/cheminfo/xps-analysis/compare/v0.18.1...v0.19.0) (2024-07-01)
+
+
+### Features
+
+* update dependencies and change hose codes ([a64b6bf](https://github.com/cheminfo/xps-analysis/commit/a64b6bff33d37cb71b5c23f0434d67570c3eaf30))
+
 ## [0.18.1](https://github.com/cheminfo/xps-analysis/compare/v0.18.0...v0.18.1) (2024-06-12)
 
 
