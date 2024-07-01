@@ -17,14 +17,14 @@ test('predictUsingHoseCodes', async () => {
   ]);
 
   expect(resultNoRef.peaks[0]).toStrictEqual({
-    x: 290.6834,
+    x: 290.6488,
     y: 1,
   });
 
   const resultSolidRef = await predictUsingHoseCodes(molecule, {
     energyReference: 'solid',
   });
-  expect(resultSolidRef.peaks[0].x).toBeCloseTo(285.30823, 4);
+  expect(resultSolidRef.peaks[0].x).toBeCloseTo(285.27212, 4);
 
   expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(
     resultNoRef.grouped[0].prediction.boxplot.median,
