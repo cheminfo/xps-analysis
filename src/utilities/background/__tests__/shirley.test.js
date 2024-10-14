@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest';
+
 import { shirley } from '../shirley';
 
 test('shirley', () => {

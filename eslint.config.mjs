@@ -6,7 +6,6 @@ export default [
   {
     languageOptions: {
       globals: {
-        ...globals.jest,
         ...globals.node,
       },
     },

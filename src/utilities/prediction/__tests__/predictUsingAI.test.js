@@ -1,4 +1,5 @@
 import OCL from 'openchemlib';
+import { test, expect } from 'vitest';
 
 import { predictUsingAI } from '../predictUsingAI.js';
 

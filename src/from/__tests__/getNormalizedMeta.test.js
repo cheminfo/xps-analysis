@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest';
+
 import { getNormalizedMeta } from '../getNormalizedMeta';
 
 import meta from './meta.json';

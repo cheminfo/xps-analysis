@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { parseRegion } from '../parseRegion.js';
 
 describe('XPS region parser', () => {

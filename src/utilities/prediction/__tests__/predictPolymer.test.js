@@ -1,4 +1,5 @@
 import { Molecule } from 'openchemlib';
+import { test } from 'vitest';
 
 import { predictPolymer } from '../predictPolymer';
 

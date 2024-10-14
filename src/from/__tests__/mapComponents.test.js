@@ -1,4 +1,5 @@
 import { parseCASA } from 'vamas';
+import { describe, it, expect } from 'vitest';
 
 import { mapComponents } from '../mapComponents';
 

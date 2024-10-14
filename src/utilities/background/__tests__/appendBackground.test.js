@@ -1,6 +1,8 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
+import { test } from 'vitest';
+
 import { fromVamas } from '../../../from/fromVamas.js';
 import { appendBackground } from '../appendBackground.js';
 
