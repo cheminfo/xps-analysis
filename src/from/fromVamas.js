@@ -6,7 +6,7 @@ import { getNormalizedMeta } from './getNormalizedMeta';
 
 /**
  * Returns an Analysis from a VAMAS text file
- * @param {ArrayBuffer|string} [text] the vamas text file
+ * @param {ArrayBuffer|string} [text] - the vamas text file
  */
 export function fromVamas(text) {
   text = ensureString(text);

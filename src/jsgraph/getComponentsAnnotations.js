@@ -1,5 +1,5 @@
 /**
- * @typedef {Object} Component
+ * @typedef {object} Component
  * @property {number} kineticEnergy
  * @property {number} bindingEnergy
  * @property {number} intensity
@@ -13,9 +13,9 @@
  * @param {object} [options={}]
  * @param {string} [options.fillColor='green']
  * @param {string} [options.strokeColor='red']
- * @param {string} [options.showAssignment=true] Display the assignment
- * @param {Function} [options.creationFct] (annotation, component) => {}: callback allowing to add properties
- * @param {string} [options.mode='binding'] 'binding' or 'kinetic'
+ * @param {string} [options.showAssignment=true] - Display the assignment
+ * @param {Function} [options.creationFct] - (annotation, component) => {}: callback allowing to add properties
+ * @param {string} [options.mode='binding'] - 'binding' or 'kinetic'
  * @returns array
  */
 

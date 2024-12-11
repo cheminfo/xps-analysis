@@ -15,7 +15,7 @@ const xShiftFcts = {
  * @param {import('openchemlib').Molecule} [molecule]
  * @param {object} options
  * @param {string} [options.statsKey='gw']
- * @param {number|undefined} [options.atomMapNo] // allows to filter for specific atoms
+ * @param {number|undefined} [options.atomMapNo] - // allows to filter for specific atoms
  * @param {'solid'|'none'} [options.energyReference='solid']
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
  */

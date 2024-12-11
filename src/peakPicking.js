@@ -4,8 +4,8 @@ import { gsd } from 'ml-gsd';
  * Allow
  * @param {object} spectrum
  * @param {object} [options={}]
- * @param {object} [options.gsd={}] global spectra deconvolution options. Available options: http://mljs.github.io/global-spectral-deconvolution/#gsd
- * @return {array} Array of peaks
+ * @param {object} [options.gsd={}] - global spectra deconvolution options. Available options: http://mljs.github.io/global-spectral-deconvolution/#gsd
+ * @returns {Array} Array of peaks
  */
 
 export function peakPicking(spectrum, options = {}) {

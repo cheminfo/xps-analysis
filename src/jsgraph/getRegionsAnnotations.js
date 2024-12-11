@@ -4,7 +4,7 @@
  * @param {object} [options={}]
  * @param {string} [options.fillColor='rgba(0,255,255,0.1)']
  * @param {string} [options.strokeColor='red']
- * @param {string} [options.mode='binding'] 'binding' or 'kinetic'
+ * @param {string} [options.mode='binding'] - 'binding' or 'kinetic'
  * @returns array
  */
 

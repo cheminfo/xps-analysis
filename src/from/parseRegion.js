@@ -12,7 +12,7 @@ export function parseRegion(string) {
   let augerMatches = string.match(AUGER_REGEX);
   if (xpsMatches && xpsMatches.groups.shell) {
     result.orbital.element = xpsMatches.groups.element;
-    result.orbital.shell = parseInt(xpsMatches.groups.shell, 10);
+    result.orbital.shell = Number.parseInt(xpsMatches.groups.shell, 10);
     result.orbital.angularMomentum = xpsMatches.groups.angularMomentum;
   }
   if (augerMatches && augerMatches.groups.transition) {

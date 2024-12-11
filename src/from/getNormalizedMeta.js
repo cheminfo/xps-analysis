@@ -10,7 +10,7 @@ export function getNormalizedMeta(meta = {}) {
   const energyType = {};
   energyType.kind = meta['abscissa label']
     .replace('energy', '')
-    .replace(/\s/g, '')
+    .replaceAll(/\s/g, '')
     .toLowerCase();
   energyType.units = meta['abscissa units'];
   normalized.energyType = energyType;

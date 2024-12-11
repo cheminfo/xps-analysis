@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import OCL from 'openchemlib';
 import { parseDwar } from 'openchemlib-utils';
