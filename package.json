@@ -32,24 +32,24 @@
   "homepage": "https://github.com/cheminfo/xps-analysis#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.26.3",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/coverage-v8": "^3.2.4",
     "cheminfo-build": "^1.2.0",
     "eslint": "^9.16.0",
-    "eslint-config-cheminfo": "^13.0.0",
-    "globals": "^15.13.0",
-    "openchemlib": "^8.17.0",
+    "eslint-config-cheminfo": "^15.0.2",
+    "globals": "^16.3.0",
+    "openchemlib": "^9.7.0",
     "papaparse": "^5.4.1",
     "prettier": "^3.4.2",
     "rollup": "^4.28.1",
     "spectrum-generator": "^8.0.12",
-    "vitest": "^2.1.8"
+    "vitest": "^3.2.4"
   },
   "dependencies": {
-    "common-spectrum": "2.12.0",
+    "common-spectrum": "3.1.0",
     "ensure-string": "^1.2.0",
     "md5": "^2.3.0",
-    "ml-gsd": "^12.1.8",
-    "openchemlib-utils": "^6.5.1",
+    "ml-gsd": "^13.0.1",
+    "openchemlib-utils": "^8.3.0",
     "vamas": "^0.3.0"
   },
   "info": {
