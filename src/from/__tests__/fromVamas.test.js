@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { fromVamas } from '../fromVamas';
 
@@ -12,6 +12,7 @@ describe('fromVamas', () => {
       'utf8',
     );
     let result = fromVamas(text).spectra[0];
+
     expect(Object.keys(result.variables)).toHaveLength(3);
     expect(Object.keys(result.meta)).toHaveLength(62);
     expect(typeof result.meta.cheminfo.meta).toBe('object');
@@ -23,6 +24,7 @@ describe('fromVamas', () => {
       'utf8',
     );
     let result = fromVamas(augerText).spectra[0];
+
     expect(Object.keys(result.variables)).toHaveLength(2);
     expect(Object.keys(result.meta)).toHaveLength(62);
     expect(typeof result.meta.cheminfo.meta).toBe('object');
@@ -31,6 +33,7 @@ describe('fromVamas', () => {
   it('peg with CASA information', () => {
     const pegText = readFileSync(join(__dirname, './data/pegCASA.vms'), 'utf8');
     let result = fromVamas(pegText).spectra[0];
+
     expect(Object.keys(result.variables)).toHaveLength(2);
     expect(Object.keys(result.meta)).toHaveLength(62);
     expect(typeof result.meta.cheminfo.meta).toBe('object');
@@ -43,9 +46,12 @@ describe('fromVamas', () => {
     );
     const parsed = fromVamas(text);
     const c1s = parsed.spectra[1];
+
     expect(Object.keys(c1s.variables)).toHaveLength(2);
     expect(Object.keys(c1s.meta)).toHaveLength(62);
+
     const cheminfoMeta = c1s.meta.cheminfo.meta;
+
     expect(cheminfoMeta.components).toHaveLength(4);
     expect(cheminfoMeta.regions).toHaveLength(1);
     expect(cheminfoMeta).toMatchSnapshot();

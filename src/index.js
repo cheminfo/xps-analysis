@@ -4,8 +4,8 @@ import { getComponentsAnnotations } from './jsgraph/getComponentsAnnotations.js'
 import { getRegionsAnnotations } from './jsgraph/getRegionsAnnotations.js';
 
 export {
-  Analysis,
   AnalysesManager,
+  Analysis,
   fromJcamp,
   toJcamp,
   toJcamps,

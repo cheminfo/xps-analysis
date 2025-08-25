@@ -1,5 +1,5 @@
 import { parseCASA } from 'vamas';
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { mapComponents } from '../mapComponents';
 
@@ -18,15 +18,14 @@ CASA comp (*Mo 3d MoO3*) (*LA(1.53,243)*) Area 1779.7097 1e-020 2327991 8 0.6666
 
   it('test the mapping', () => {
     let mappedComponents = mapComponents(parsedBlockComment, 10);
+
     expect(mappedComponents).toHaveLength(10);
     expect(mappedComponents[0]).toHaveProperty('kineticEnergy');
     expect(mappedComponents[0]).toHaveProperty('bindingEnergy');
     expect(mappedComponents[0].kineticEnergy.value).toBeGreaterThan(0);
     expect(mappedComponents[0].bindingEnergy.value).toBeLessThan(0);
-    expect(mappedComponents[0].shape.kind).toStrictEqual(
-      'lorentzianAsymmetric',
-    );
-    expect(mappedComponents[0].assignment).toStrictEqual('Mo 3d MoS2 2H');
+    expect(mappedComponents[0].shape.kind).toBe('lorentzianAsymmetric');
+    expect(mappedComponents[0].assignment).toBe('Mo 3d MoS2 2H');
     expect(mappedComponents[0]).toHaveProperty('area');
   });
 });

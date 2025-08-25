@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { test } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { fromVamas } from '../../../from/fromVamas.js';
 import { appendBackground } from '../appendBackground.js';
@@ -14,5 +14,6 @@ test('background', () => {
   const { spectra } = fromVamas(text);
   const c1s = spectra[1];
 
-  appendBackground(c1s);
+  // For now, just test that the function doesn't throw
+  expect(() => appendBackground(c1s)).not.toThrow();
 });

@@ -1,11 +1,12 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { parseRegion } from '../parseRegion.js';
 
 describe('XPS region parser', () => {
   it('wide', () => {
     let region = parseRegion('wide');
-    expect(region.name).toStrictEqual('wide');
+
+    expect(region.name).toBe('wide');
     expect(region.orbital).toStrictEqual({
       element: null,
       shell: null,
@@ -19,6 +20,7 @@ describe('XPS region parser', () => {
 
   it('Auger', () => {
     let region = parseRegion('Cu LMM');
+
     expect(region.orbital).toStrictEqual({
       element: null,
       shell: null,
@@ -32,6 +34,7 @@ describe('XPS region parser', () => {
 
   it('XPS detail', () => {
     let region = parseRegion('O 1s');
+
     expect(region.orbital).toStrictEqual({
       element: 'O',
       shell: 1,
