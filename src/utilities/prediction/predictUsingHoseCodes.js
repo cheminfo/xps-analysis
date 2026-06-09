@@ -18,6 +18,7 @@ const xShiftFcts = {
  * @param {number|undefined} [options.atomMapNo] - // allows to filter for specific atoms
  * @param {'solid'|'none'} [options.energyReference='solid']
  * @param {import('spectrum-generator').GenerateSpectrumOptions} [options.spectrum]
+ * @param {object} [options.data] - Pre-loaded QM9 hose-code statistics (`{ spheres: { ... } }`). When provided, the network fetch from data.cheminfo.org is skipped, which makes the prediction work offline and in the browser.
  */
 export async function predictUsingHoseCodes(molecule, options = {}) {
   const {
@@ -25,10 +26,11 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
     spectrum: spectrumOptions,
     energyReference = 'solid',
     atomMapNo,
+    data: injectedData,
   } = options;
-  await ensureSpheres();
+  const spheresData = await ensureSpheres(injectedData);
 
-  const spheres = data.spheres[statsKey];
+  const spheres = spheresData.spheres[statsKey];
   const diaIDs = getDiastereotopicAtomIDsAndH(molecule);
   const annotations = [];
   const annotationOptions = { verticalPosition: 0 };
@@ -108,7 +110,7 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
       uniqueValuesObject[key] = uniqueValueObject;
     }
   }
-  const grouped = Object.values(uniqueValuesObject).sort(
+  const grouped = Object.values(uniqueValuesObject).toSorted(
     (a, b) => a.prediction.boxplot.median - b.prediction.boxplot.median,
   );
 
@@ -125,13 +127,15 @@ export async function predictUsingHoseCodes(molecule, options = {}) {
   return { grouped, spectrum, annotations, peaks };
 }
 
-async function ensureSpheres() {
+async function ensureSpheres(injectedData) {
+  if (injectedData) return injectedData;
   if (data) return data;
   const url = `https://data.cheminfo.org/xps/qm9.json`;
   const response = await fetch(url);
   //We do a global in place modification,
   // eslint-disable-next-line require-atomic-updates
   data = await response.json();
+  return data;
 }
 
 function getAnnotations(prediction, highlight, options) {
