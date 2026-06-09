@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.0](https://github.com/cheminfo/xps-analysis/compare/v0.19.0...v1.0.0) (2026-06-09)
+
+
+### Features
+
+* allow injecting pre-loaded hose-code data in predictUsingHoseCodes ([9cee29f](https://github.com/cheminfo/xps-analysis/commit/9cee29f3f84a98cf465f678066e2c8cd2965302d))
+* migrate package to ESM and align with current standards ([644d6b3](https://github.com/cheminfo/xps-analysis/commit/644d6b3a3e94b9b4f57f45aaaec1dfd3b0b97889))
+
+
+### Bug Fixes
+
+* move spectrum-generator to dependencies ([b7f02c4](https://github.com/cheminfo/xps-analysis/commit/b7f02c47faddcc4e72e439e46b07d566e35035ae))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([fdfc06b](https://github.com/cheminfo/xps-analysis/commit/fdfc06b01f1d3644ce2d250786fd212289e3503d))
+
 ## [0.19.0](https://github.com/cheminfo/xps-analysis/compare/v0.18.1...v0.19.0) (2024-07-01)
 
 
