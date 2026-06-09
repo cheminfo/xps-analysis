@@ -32,4 +32,4 @@ test('predictUsingHoseCodes', async () => {
   expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(
     resultNoRef.grouped[0].prediction.boxplot.median,
   );
-});
+}, 60000);

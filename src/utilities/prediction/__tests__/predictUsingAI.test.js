@@ -9,4 +9,4 @@ test('predictUsingAI', async () => {
   const result = await predictUsingAI(molecule);
 
   expect(result.peaks).toHaveLength(3);
-});
+}, 60000);

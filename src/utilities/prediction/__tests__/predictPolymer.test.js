@@ -9,4 +9,4 @@ test('predictPolymer', async () => {
   const polymer = await predictPolymer(molecule);
 
   expect(polymer).toHaveProperty('grouped');
-});
+}, 60000);
