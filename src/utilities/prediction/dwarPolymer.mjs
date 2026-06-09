@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- standalone data-generation script */
 import { writeFileSync } from 'node:fs';
 
 import OCL from 'openchemlib';

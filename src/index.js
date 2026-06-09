@@ -4,18 +4,18 @@ import { getComponentsAnnotations } from './jsgraph/getComponentsAnnotations.js'
 import { getRegionsAnnotations } from './jsgraph/getRegionsAnnotations.js';
 
 export {
-  Analysis,
   AnalysesManager,
+  Analysis,
   fromJcamp,
   toJcamp,
   toJcamps,
 } from 'common-spectrum';
 
-export { fromVamas } from './from/fromVamas';
+export { fromVamas } from './from/fromVamas.js';
 
-export { peakPicking } from './peakPicking';
+export { peakPicking } from './peakPicking.js';
 
-export { references } from './references';
+export { references } from './references.js';
 
 export const JSGraph = {
   ...OriginalJSGraph,
@@ -23,6 +23,6 @@ export const JSGraph = {
   getComponentsAnnotations,
 };
 
-export { predictUsingHoseCodes } from './utilities/prediction/predictUsingHoseCodes';
-export { predictUsingAI } from './utilities/prediction/predictUsingAI';
-export { predictPolymer } from './utilities/prediction/predictPolymer';
+export { predictUsingHoseCodes } from './utilities/prediction/predictUsingHoseCodes.js';
+export { predictUsingAI } from './utilities/prediction/predictUsingAI.js';
+export { predictPolymer } from './utilities/prediction/predictPolymer.js';

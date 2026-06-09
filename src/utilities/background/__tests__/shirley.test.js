@@ -1,6 +1,6 @@
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
-import { shirley } from '../shirley';
+import { shirley } from '../shirley.js';
 
 test('shirley', () => {
   const data = {
@@ -13,6 +13,7 @@ test('shirley', () => {
   };
 
   const result = shirley(data, options);
+
   expect(result.background).toStrictEqual({
     x: [1, 2, 3, 4],
     y: [1, 2, 3, 4],

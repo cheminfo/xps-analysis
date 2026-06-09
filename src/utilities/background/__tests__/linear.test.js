@@ -1,6 +1,6 @@
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
-import { linear } from '../linear';
+import { linear } from '../linear.js';
 
 test('linear', () => {
   const data = {
@@ -13,6 +13,7 @@ test('linear', () => {
   };
 
   const result = linear(data, options);
+
   expect(result.background).toStrictEqual({
     x: [1, 2, 3, 4],
     y: [1, 2, 3, 4],

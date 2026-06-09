@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { predictUsingHoseCodes } from '../predictUsingHoseCodes.js';
 
@@ -9,6 +9,7 @@ test('predictUsingHoseCodes', async () => {
   const resultNoRef = await predictUsingHoseCodes(molecule, {
     energyReference: 'none',
   });
+
   expect(Object.keys(resultNoRef)).toHaveLength(4);
   expect(Object.keys(resultNoRef)).toStrictEqual([
     'grouped',
@@ -25,6 +26,7 @@ test('predictUsingHoseCodes', async () => {
   const resultSolidRef = await predictUsingHoseCodes(molecule, {
     energyReference: 'solid',
   });
+
   expect(resultSolidRef.peaks[0].x).toBeCloseTo(285.27212, 4);
 
   expect(resultSolidRef.grouped[0].prediction.boxplot.median).not.toBe(

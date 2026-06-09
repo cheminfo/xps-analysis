@@ -1,21 +1,18 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { describe, it, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
-import { fromVamas } from '..';
-import { peakPicking } from '../peakPicking';
+import { fromVamas } from '../index.js';
+import { peakPicking } from '../peakPicking.js';
 
-describe('peakPicking', () => {
+test('check number of peaks with default options', () => {
   const text = readFileSync(
-    join(__dirname, '../../testFiles/multiplex.vms'),
+    join(import.meta.dirname, '../../testFiles/multiplex.vms'),
     'utf8',
   );
+  const analysis = fromVamas(text);
+  const result = peakPicking(analysis.getXYSpectrum());
 
-  let analysis = fromVamas(text);
-
-  it('check number of peaks with default options', () => {
-    let result = peakPicking(analysis.getXYSpectrum());
-    expect(result).toHaveLength(12);
-  });
+  expect(result).toHaveLength(12);
 });

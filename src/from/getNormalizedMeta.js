@@ -5,29 +5,32 @@ import { mapRegions } from './mapRegions.js';
 import { parseRegion } from './parseRegion.js';
 
 export function getNormalizedMeta(meta = {}) {
-  const normalized = {};
-  normalized.region = parseRegion(meta['block identifier']);
-  const energyType = {};
-  energyType.kind = meta['abscissa label']
-    .replace('energy', '')
-    .replaceAll(/\s/g, '')
-    .toLowerCase();
-  energyType.units = meta['abscissa units'];
+  const normalized = {
+    region: parseRegion(meta['block identifier']),
+  };
+  const energyType = {
+    kind: meta['abscissa label']
+      .replace('energy', '')
+      .replaceAll(/\s/g, '')
+      .toLowerCase(),
+    units: meta['abscissa units'],
+  };
   normalized.energyType = energyType;
 
-  const source = {};
-  source.label = meta['analysis source label'];
-  source.characteristicEnergy = {
-    value: meta['analysis source characteristic energy'],
-    units: 'eV',
-  };
-  source.beamWidthX = {
-    value: meta['analysis source beam width x'],
-    units: 'um',
-  };
-  source.beamWidthY = {
-    value: meta['analysis source beam width y'],
-    units: 'um',
+  const source = {
+    label: meta['analysis source label'],
+    characteristicEnergy: {
+      value: meta['analysis source characteristic energy'],
+      units: 'eV',
+    },
+    beamWidthX: {
+      value: meta['analysis source beam width x'],
+      units: 'um',
+    },
+    beamWidthY: {
+      value: meta['analysis source beam width y'],
+      units: 'um',
+    },
   };
   normalized.analysisSource = source;
   normalized.speciesLabel = meta['species label'];

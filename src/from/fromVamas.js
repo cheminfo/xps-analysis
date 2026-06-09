@@ -2,7 +2,7 @@ import { Analysis } from 'common-spectrum';
 import { ensureString } from 'ensure-string';
 import { parse } from 'vamas';
 
-import { getNormalizedMeta } from './getNormalizedMeta';
+import { getNormalizedMeta } from './getNormalizedMeta.js';
 
 /**
  * Returns an Analysis from a VAMAS text file
@@ -51,18 +51,18 @@ export function fromVamas(text) {
     if (xLabel === 'Kinetic energy' && sourceEnergy) {
       // we will calculate binding energy
       variables.x = {
-        data: xValues.map((value) => sourceEnergy - value).reverse(),
+        data: xValues.map((value) => sourceEnergy - value).toReversed(),
         label: 'Binding energy',
         units: xUnits,
         type: 'DEPENDENT',
       };
       variables.y = {
-        data: yValues.reverse(),
+        data: yValues.toReversed(),
         label: yLabel,
         type: 'DEPENDENT',
       };
       variables.k = {
-        data: xValues.reverse(),
+        data: xValues.toReversed(),
         label: xLabel,
         units: xUnits,
         type: 'INDEPENDENT',
