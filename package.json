@@ -35,6 +35,7 @@
     "md5": "^2.3.0",
     "ml-gsd": "^14.1.0",
     "openchemlib-utils": "^8.15.1",
+    "spectrum-generator": "^8.2.1",
     "vamas": "^0.3.0"
   },
   "devDependencies": {
@@ -46,7 +47,6 @@
     "openchemlib": "^9.22.1",
     "papaparse": "^5.5.3",
     "prettier": "^3.8.4",
-    "spectrum-generator": "^8.2.1",
     "vitest": "^4.1.8"
   },
   "info": {
